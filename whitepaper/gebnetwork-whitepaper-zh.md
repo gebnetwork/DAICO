@@ -488,7 +488,7 @@ mapping(bytes32 => Order) internal OrderList
 &emsp;&emsp;这种PegContract现在就能在以太坊上实现，并且能够无需信任地完成所有工作：它能够验证BTC已经被发送到某个地址并且锁定了；它能够发行E-BTC；它能够燃烧E-BTC并提供烧毁证明。BTC-Relay就是这样一种合约，BTC-Relay实现了比特币简化支付证明（SPV），从而能够验证一笔交易是否已经在比特币区块链上被确认（需要向Relayer支付验证手续费以激励Relayer持续向BTC-Relay合约提交比特币区块头）。因此在比特币系统中的任何交易，从支付到BTC的锁定，都可以被以太坊合约验证。同理我们可以实现用以太坊合约验证比特币现金（BCH）区块链上的交易。<br />
 &emsp;&emsp;双向挂钩存在的问题是，我们无法在比特币区块链上部署ETH-Relay或者任何锁定合约。我们可以等到RootStock发布以后，在ETH和RootStock之间建立一个双向挂钩，以实现比特币和以太坊之间的交互。另一个实际的解决方案是，将用户的BTC锁定在多重签名地址中，其中每个签名者必须在以太坊PegContract中存入ETH。当BTC被锁定时，PegContract将照常发行E-BTC。当E-BTC被发回PegContract时，它们将被烧毁并由PegContract生成证明。同时PegContract开始倒计时，为签名者提供足够的时间来验证烧毁证明并解锁BTC。如果任何签名者不签署多重签名，他存放在PegContract中的ETH会被转入用户的以太坊地址。为了使赎回过程更加顺利，签名者可以从每次存入/赎回过程中获得手续费奖励。具体原理如下图所示：<br />
 
-![img](https://images-cdn.shimo.im/5Imu56tPg4cbuo8E/1_2yZDbi_aGbu_8gQBuie4tg.jpg!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/cross-chain.jpg)
 
 #### 3.6.2. 闪电原子交换（Lighting atomic swap）技术（演进方案）
 &emsp;&emsp;为了确保跨链交易的安全性，双向挂钩技术的交易速度必须满足以下不等式：<br />
@@ -499,7 +499,7 @@ v表示跨链安全交易速度；v1、v2分别表示两条区块链单独的安
 &emsp;&emsp;闪电原子交换是一种结合了闪电网络和原子交换两种技术的即时跨链交易技术。闪电网络是一种协议，它通过在不同的交易者之间创建链下支付通道来工作，只有在打开和关闭支付通道时才需要上链交易。这有三大好处：第一，加快交易速度；第二，降低交易费用；第三，提高交易容量。原子交换是另一种协议，它能够让交易双方无需信任地进行跨链交易。原子交换的执行只有两种结果，要么双方成功完成数字货币交换，要么什么都没有发生。最重要的是，因为交易无需信任任何第三方，也就避免了欺诈。<br />
 &emsp;&emsp;单独使用原子交换需要很长的等待时间来确保安全，并且需要上链至少四笔交易。而在两条区块链均存在支付通道的情况下，使用闪电原子交换可以大大缩短等待时间，并且不需要上链任何一笔交易。Lightning实验室已经于2017年11月16日确认完成了全球首次基于比特币-莱特币区块链的闪电原子交换。具体的技术原理如下图所示：<br />
 
-![img](https://images-cdn.shimo.im/OfPJLNQYPYAndFnu/lightning_swap.png!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/lightning-swap.jpg)
 
 截至本文写作时，比特币闪电网络已经在比特币主网成功发布，以太坊上的闪电网络——雷电网络（Raiden Network）正在密集研发中。我们将持续关注相关项目的进展并在合适的时间（待相关技术的可靠性得到验证）将闪电原子交换技术引入GEB Network。<br />
 
@@ -577,7 +577,7 @@ function verifyCombinatedParams() {
 #### 4.5.1. 代币发行计划——DAICO
 &emsp;&emsp;2018年1月，Vitalik Buterin提出了一个革命性的概念——结合ICO和DAO（分布式自治系统）的DAICO （https://ethresear.ch/t/explanation-of-daicos/465） 在DAICO中参与者可以投票赞成或者反对固定的预算增加，如果团队没有成功实施该项目，参与者可以投票退回。<br />
 
-![img](https://images-cdn.shimo.im/2iKsZh1eQUQospcA/image.png!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/daico.jpg)
 
 &emsp;&emsp;GEB Network将使用DAICO进行资金的众筹和使用管理，将规则100%透明的嵌入在代码中，直接由参与者和智能合约控制，不再有第三方。<br />
 
@@ -900,13 +900,13 @@ pubsub.emit('orderList', newOrders);
 
 当共享订单数过高时，由于服务集群会长期追踪各个交易所的数据并对日志数据进行分析，因此我们可根据结论在集群中设置高性能节点以主动推送订单给流动性高的交易所的方式来提升撮合效率。<br />
 
-![img](https://images-cdn.shimo.im/j88zpJs5RwcUs7b9/1525945215742.jpg!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/sharded-pool.jpg)
 
 ### 5.6. 可信预言机集合
 &emsp;&emsp;由于部署在区块链网络中的智能合约的主观性体现在对链内数据的访问，而对于链外数据只能被动接受。因此，我们需要一个可信任的实体——预言机（Oracle）来完成诚实数据的输入。预言机是区块链世界与现实世界沟通的桥梁，它提供了一个权威准确、不可篡改、稳定、并可接受审计的数据查询接口。在区块链系统中获取链外数据的一般性流程：智能合约会在预定的时间或通过事件触发让Oracle从链外的数据源获取数据并输入，然后智能合约按照获取的数据采取预设的行动。然而该过程的实现，我们要解决两个关键问题：1)共识；2）受信方。<br />
 &emsp;&emsp;GEB Network采用声誉系统和流动服务机制来解决以上问题。首先，我们选取N个预言机组成混合网络，并让网络中单一预言机与数据源之间建立1:M的关系。其次，在数据源和预言机上分别设有声誉系统，对可信输入形成双层保障机制。最后，根据数据源和预言机的多次工作流的信用积累实行流动服务，以此形成正向反馈来提高数据查询与数据写入的效率。<br />
 
-![img](https://images-cdn.shimo.im/bMV0kvVaJx8ktsDt/1526382970210.jpg!thumbnail)
+![img](https://raw.githubusercontent.com/gebnetwork/DAICO/master/whitepaper/images/data-feed.jpg)
 
 &emsp;&emsp;预言机网络和数据源都是动态的，它是实现流动服务的基础。每一个Oracle合约实例都需要在GEB Network中进行注册，并填充目标数据关键字，费用，保证金阈值，参与门槛等内容。在需要获取链外数据时，GEB Network会根据合约实例内容撮合需求方和Oracle，匹配成功后Oracle抵押GEB Token正式组成预言机网络。在共识阶段，先检查达成共识的Oracle数是否符合Oracle合约实例中的预设值，若符合，则进行Data Feed及分发奖励金；若不符合，则阻塞Data Feed进程且所有Oracle重试不超过有限K次向数据源获取数据并进行共识的过程，在重试的过程中，Oracle有权更新数据源并应该自身维护一个对数据源信用积分更新的列表来提高查询效率。若有限K次重试后仍然无法达成共识，则分以下几种情况处理：<br />
 &emsp;&emsp;**前置条件，预言机网络节点数N，共识节点数预设值C，其中C满足：**<br />
@@ -917,7 +917,7 @@ pubsub.emit('orderList', newOrders);
 2. 当实际共识节点数N/3<=C'<=N/2时，所有预言机网络节点失去声誉点，并应主动更新自身所维护的数据源信用积分列表。<br />
 3. 当实际共识节点数C'<N/3时，所有预言机网络节点失去声誉点和保证金，并应主动更新自身所维护的数据源信用积分列表，整个预言机网络洗牌重组。<br />
 
-![img](https://images-cdn.shimo.im/iC42sN7UR4QpG00C/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6.png!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/oracle.jpg)
 
 &emsp;&emsp;以下我们描述了Oracle合约需具备但不限于所列出的属性：<br/>
 
@@ -1042,12 +1042,12 @@ pubsub.emit('orderList', newOrders);
 2016年6月，新加坡金融管理局推出了沙盒机制 Sandbox，只要任何在法律规定的受保护中注册的金融科技公司，在事先报备的情况下，允许从事和目前法律法规有所冲突的业务，并且即使以后被官方终止相关业务，也不会追究其相关的法律责任。通过这种沙盒的机制，新加坡政府能够在可控范围内鼓励企业进行各种区块链的金融创新。<br />
 &emsp;&emsp;综上分析可知，GEB团队在未来发行代币时将会严格遵守世界各国目前的相关政策法规，先从对数字货币政策相对开放的新加坡发行，逐步向其他国家发展。<br />
 
-![img](https://images-cdn.shimo.im/U3ARYnPvCYcSTzKB/cryptocurrencies_infographic_1.jpg!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/world.jpg)
 
 <br /><br />
 ### 7.3. SWOT分析
 
-![img](https://images-cdn.shimo.im/zxKPWSfs5LkpyqNl/1526375181412.jpg!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/swot.jpg)
 
 <br /><br />
 ## 8. 路线图
