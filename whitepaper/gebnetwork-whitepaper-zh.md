@@ -611,7 +611,7 @@ function verifyCombinatedParams() {
 
 ### 5.1. GEB Network整体架构
 
-![img](https://images-cdn.shimo.im/dpKw3XaKhgg377I7/image.png!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/network-structure.jpg)
 
 ### 5.2. 陪审员网络
 &emsp;&emsp;智能合约可以通过控制链上交易来解决争端，但是无法控制链下交易。陪审员网络用于处理智能合约无法判断的情况，并将处理结果提交给智能合约。当用户在交易过程中申请仲裁时，陪审员网络将介入处理。陪审员网络的设计目标是通过经济激励建立一个分散的争议解决机制，这种机制避免了对单一仲裁机构的绝对信任，因此具有更高的安全性。整套仲裁软件运行在由以太坊和IPFS构建的基础设施之上。通过一个简单的用户界面，陪审员可以方便地接收争议双方提交的证据并做出仲裁。所有的仲裁记录都会被永久保存在以太坊区块链上，所有不可篡改的加密证据（由[PageSigner](https://tlsnotary.org/pagesigner.html)生成）都会被永久保存在IPFS上。<br />
