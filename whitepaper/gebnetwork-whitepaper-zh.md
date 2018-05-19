@@ -1136,6 +1136,13 @@ pubsub.emit('orderList', newOrders);
 
 <br /><br />
 ## 10. 参考文献
-
+[1] W3C. JSON-LD 1.0, https://www.w3.org/TR/json-ld/, 2014.<br />
+[2] Jorge Izquierdo. The new operating system for protocols and DApps, https://blog.aragon.one/introducing-aragonos-3-0-alpha-the-new-operating-system-for-protocols-and-dapps-348f7ac92cff, 2018.<br />
+[3] BitcoinWiki. Payment methods, https://en.bitcoin.it/wiki/Payment_methods, 2016.<br />
+[4] Joseph Poon, Thaddeus Dryja. The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments, 2016.<br />
+[5] Vitalik Buterin. A Next-Generation Smart Contract and Decentralized Application Platform, https://github.com/ethereum/wiki/wiki/White-Paper, 2014.<br />
+[6] Vitalik Buterin. Explanation of DAICOs, https://ethresear.ch/t/explanation-of-daicos/465, 2018.<br />
+[7] Matus Lestan, Joe Urgo, Alexander Khoriaty. district0x Network: A cooperative of decentralized marketplaces and communities, 2017.<br />
+[8] RSK Labs. Sidechains, Drivechains, and RSK 2-Way peg Design, https://www.rsk.co/blog/sidechains-drivechains-and-rsk-2-way-peg-design, 2017.<br />
 
 
