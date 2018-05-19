@@ -488,7 +488,7 @@ mapping(bytes32 => Order) internal OrderList
 &emsp;&emsp;这种PegContract现在就能在以太坊上实现，并且能够无需信任地完成所有工作：它能够验证BTC已经被发送到某个地址并且锁定了；它能够发行E-BTC；它能够燃烧E-BTC并提供烧毁证明。BTC-Relay就是这样一种合约，BTC-Relay实现了比特币简化支付证明（SPV），从而能够验证一笔交易是否已经在比特币区块链上被确认（需要向Relayer支付验证手续费以激励Relayer持续向BTC-Relay合约提交比特币区块头）。因此在比特币系统中的任何交易，从支付到BTC的锁定，都可以被以太坊合约验证。同理我们可以实现用以太坊合约验证比特币现金（BCH）区块链上的交易。<br />
 &emsp;&emsp;双向挂钩存在的问题是，我们无法在比特币区块链上部署ETH-Relay或者任何锁定合约。我们可以等到RootStock发布以后，在ETH和RootStock之间建立一个双向挂钩，以实现比特币和以太坊之间的交互。另一个实际的解决方案是，将用户的BTC锁定在多重签名地址中，其中每个签名者必须在以太坊PegContract中存入ETH。当BTC被锁定时，PegContract将照常发行E-BTC。当E-BTC被发回PegContract时，它们将被烧毁并由PegContract生成证明。同时PegContract开始倒计时，为签名者提供足够的时间来验证烧毁证明并解锁BTC。如果任何签名者不签署多重签名，他存放在PegContract中的ETH会被转入用户的以太坊地址。为了使赎回过程更加顺利，签名者可以从每次存入/赎回过程中获得手续费奖励。具体原理如下图所示：<br />
 
-![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/cross-chain.jpg)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/cross-chain-vertical.jpg)
 
 #### 3.6.2. 闪电原子交换（Lighting atomic swap）技术（演进方案）
 &emsp;&emsp;为了确保跨链交易的安全性，双向挂钩技术的交易速度必须满足以下不等式：<br />
@@ -499,7 +499,7 @@ v表示跨链安全交易速度；v1、v2分别表示两条区块链单独的安
 &emsp;&emsp;闪电原子交换是一种结合了闪电网络和原子交换两种技术的即时跨链交易技术。闪电网络是一种协议，它通过在不同的交易者之间创建链下支付通道来工作，只有在打开和关闭支付通道时才需要上链交易。这有三大好处：第一，加快交易速度；第二，降低交易费用；第三，提高交易容量。原子交换是另一种协议，它能够让交易双方无需信任地进行跨链交易。原子交换的执行只有两种结果，要么双方成功完成数字货币交换，要么什么都没有发生。最重要的是，因为交易无需信任任何第三方，也就避免了欺诈。<br />
 &emsp;&emsp;单独使用原子交换需要很长的等待时间来确保安全，并且需要上链至少四笔交易。而在两条区块链均存在支付通道的情况下，使用闪电原子交换可以大大缩短等待时间，并且不需要上链任何一笔交易。Lightning实验室已经于2017年11月16日确认完成了全球首次基于比特币-莱特币区块链的闪电原子交换。具体的技术原理如下图所示：<br />
 
-![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/lightning-swap.jpg)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/lightning-swap-vertical.jpg)
 
 截至本文写作时，比特币闪电网络已经在比特币主网成功发布，以太坊上的闪电网络——雷电网络（Raiden Network）正在密集研发中。我们将持续关注相关项目的进展并在合适的时间（待相关技术的可靠性得到验证）将闪电原子交换技术引入GEB Network。<br />
 
@@ -584,7 +584,7 @@ function verifyCombinatedParams() {
 #### 4.5.2. 代币分配计划
 &emsp;&emsp;团队、顾问、众筹销售、基金会和激励池的代币将由智能合约分配如下：<br />
 
-![img](https://images-cdn.shimo.im/7lmOd6M1XJc80stf/geb_token_dis.jpg!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/token-distributed.jpg)
 
 - 团队和顾问：团队部分的GEB代币将通过智能合约冻结2年。顾问的代币不受锁定期约束，在代币销售结束之后将直接分发给该项目的顾问。
 - 众筹销售：众售分配的GEB代币将分为两部分：1）未参与锁定激励计划的部分将在众筹结束后解锁并分发到参与者的钱包中; 2）参与锁定激励计划的部分将被锁定在众售智能合约中，再根据既定规则分期解锁分发至参与者钱包中。
@@ -1052,7 +1052,7 @@ pubsub.emit('orderList', newOrders);
 <br /><br />
 ## 8. 路线图
 
-![img](https://images-cdn.shimo.im/2jXwKkVGPS0mk45M/roadmap.jpg!thumbnail)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/roadmap-horizontal.jpg)
 
 <div class="tg-wrap"><table>
   <tr>
