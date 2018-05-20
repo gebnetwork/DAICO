@@ -972,7 +972,7 @@ pubsub.emit('orderList', newOrders);
 - H5交易市场插件
 - 陪审员仲裁软件
 
-<br /><br />
+<br />
 ## 6. 协议安全分析
 
 ### 6.1. 法币转移风险
