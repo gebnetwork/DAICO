@@ -427,11 +427,11 @@ feeRecipientA代表默认交易所的收费地址，feeRecipientB代表将订单
 &emsp;&emsp;GEB协议通过一组部署在以太坊上的智能合约（DEX Contract）完成了一个标准实现。该组合约代码是开源的（使用AGPL协议发布源代码）并可以免费使用（仅需要标准gas消耗）。它们是用Solidity语言编写的，包含了实现OTC交易和抵押借贷的全部功能。<br />
 
 #### 3.5.1. 签名认证
-&emsp;&emsp;DEX Contract能够使用ecrecover函数认证交易订单的Maker的签名，以防止Taker提交伪造的订单进行欺诈（Taker的签名已经通过以太坊矿工认证，DEX Contract不需要再次认证）。该函数将哈希和签名哈希作为参数，返回生成签名的公钥地址。如果ecrecover返回的公钥地址等于Maker的地址，则该签名是真实的。<br />
+&emsp;&emsp;DEX Contract能够使用ecrecover函数认证交易订单的Maker的签名，以防止Taker提交伪造的Maker订单进行欺诈。该函数将哈希和签名哈希作为参数，返回生成签名的公钥地址。如果ecrecover返回的公钥地址等于Maker的地址，则该签名是真实的。<br />
 
 ```solidity
-address publicKeyAddress = ecrecover(hash, signature(hash));
-if(publicKeyAddress != maker) throw;
+address publicKeyAddr = ecrecover(hash, signature(hash));
+if(publicKeyAddr != maker) throw;
 ```
 
 #### 3.5.2. 时间锁定
