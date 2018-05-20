@@ -565,7 +565,7 @@ function verifyCombinatedParams() {
 	params[4] = Param(LOGIC_OP_PARAM_ID, uint8(Op.OR), encodeOperator(5, 2));
 	params[5] = Param(0, uint8(Op.LT), uint240(10));
 	params[6] = Param(PARAM_VALUE_PRARM_ID, uint8(Op.RET),0);
-	
+
 	assertEval(params, arr(uint256(10)), true);
 }
 ```
@@ -842,7 +842,41 @@ address = 40*HEXDIG
   "credential": [{
     "@graph": {
       "@context": "https://w3id.org/identity/v1",
-      
+      "@id": "http://example.gov/credentials/3732",
+      "@type": ["Credential", "PassportCredential"],
+      "name": "Passport",
+      "issuer": "https://example.gov",
+      "issued": "2010-01-01",
+      "claim": {
+        "@id": "did:ebfeb1f712ebc6f1c276e12ec21",
+        "name": "Alice Bobman",
+        "birthDate": "1985-12-14",
+        "gender": "female",
+        "nationality": {
+          "name": "United States"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressStreet": "372 Sumter Lane",
+          "addressLocality": "Blackrock",
+          "addressRegion": "Nevada",
+          "postalCode": "237842",
+          "addressCountry": "US"
+        },
+        "passport": {
+          "@type": "Passport",
+          "name": "United States Passport",
+          "documentId": "123-45-6789",
+          "issuer": "https://example.gov",
+          "issued": "2010-01-07T01:02:03Z",
+          "expires": "2020-01-07T01:02:03Z"
+        }
+      },
+      "signature": {
+        "@type": "LinkedDataSignature2015",
+        "creator": "https://example.gov/keys/27",
+        "signature": "3780eyfh3q0fhhfiq3q9f8ahsidfhf29rhaish"
+      }
     }
   }],
   "signature": {
@@ -888,10 +922,10 @@ message sharedOrder {
 
 ```javascript
 var pubsub = new PubSub(),
-    grab = function(shareOrder) {
-            // do something
-            putToEx(sharedOrder)
-            ...
+	grab = function(shareOrder) {
+    	// do something
+    	putToEx(sharedOrder)
+        ...
     };
 
 pubsub.on('orderList', grab);
@@ -932,7 +966,7 @@ pubsub.emit('orderList', newOrders);
 | threshold   | uint32 | Comprehensive assessment of Oracle and the list of data sources it maintains. |
 
 ### 5.7. GEB开源软件
-&emsp;&emsp;GEB团队将在未来提供但不限于以下软件：<br />
+&emsp;&emsp;GEB团队将在未来提供以下（不限于）的开源软件：<br />
 - 交易市场节点软件
 - 交易市场DApp
 - H5交易市场插件
@@ -1143,7 +1177,9 @@ pubsub.emit('orderList', newOrders);
 [4] Joseph Poon, Thaddeus Dryja. The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments, 2016.<br />
 [5] Vitalik Buterin. A Next-Generation Smart Contract and Decentralized Application Platform, https://github.com/ethereum/wiki/wiki/White-Paper, 2014.<br />
 [6] Vitalik Buterin. Explanation of DAICOs, https://ethresear.ch/t/explanation-of-daicos/465, 2018.<br />
-[7] Matus Lestan, Joe Urgo, Alexander Khoriaty. district0x Network: A cooperative of decentralized marketplaces and communities, 2017.<br />
-[8] RSK Labs. Sidechains, Drivechains, and RSK 2-Way peg Design, https://www.rsk.co/blog/sidechains-drivechains-and-rsk-2-way-peg-design, 2017.<br />
-
-
+[7] Vitalik Buterin. On Medium-of-Exchange Token Valuations, https://vitalik.ca/general/2017/10/17/moe.html, 2017.<br />
+[8] Conner Fromknecht. Connecting Blockchains: Instant Cross-Chain Transactions On Lightning, https://blog.lightning.engineering/announcement/2017/11/16/ln-swap.html, 2017.<br />
+[9] Alex Evans. On Value, Velocity and Monetary Theory, https://medium.com/blockchannel/on-value-velocity-and-monetary-theory-a-new-approach-to-cryptoasset-valuations-32c9b22e3b6f, 2018.<br />
+[10] Matus Lestan, Joe Urgo, Alexander Khoriaty. district0x Network: A cooperative of decentralized marketplaces and communities, 2017.<br />
+[11] 黄世亮. 拒绝付款套利攻击——比特币场外交易的一种攻击手法及防范, https://mp.weixin.qq.com/s?__biz=MzIxNTA0NDQzMA==&mid=2651798518&idx=1&sn=4e91bac98cea5bc600e8429f1af3a728, 2017.<br />
+[12] RSK Labs. Sidechains, Drivechains, and RSK 2-Way peg Design, https://www.rsk.co/blog/sidechains-drivechains-and-rsk-2-way-peg-design, 2017.<br />
