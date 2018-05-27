@@ -1178,6 +1178,10 @@ pubsub.emit('orderList', newOrders);
 
 <br /><br />
 ## 10. 顾问
+- 谷燕西
+
+&emsp;&emsp;DAEX首席战略官、基金会主席。美国德克萨斯大学MBA、圣母大学硕士、中国科技大学硕士和山东大学学士。前华泰联合证券信息技术副总监和数家金融服务公司COO。在中美的著名互联网金融公司均有着高层管理及研发的工作经验。曾在美国期权结算公司负责美国期权交易市场的唯一清算系统ENCORE的开发与运营工作。
+
 - 赵杨
 
 &emsp;&emsp;新颜征信COO，曾任职天翼征信副总裁，对电信运营商数据如何运用于征信和风控有着多年业务经验。他带领团队共同创立新颜征信，深耕大数据风控领域，凭借专业的产品及优质的服务在市场上迅速崛起。<br />
@@ -1194,5 +1198,5 @@ pubsub.emit('orderList', newOrders);
 [8] Conner Fromknecht. Connecting Blockchains: Instant Cross-Chain Transactions On Lightning, https://blog.lightning.engineering/announcement/2017/11/16/ln-swap.html, 2017.<br />
 [9] Alex Evans. On Value, Velocity and Monetary Theory, https://medium.com/blockchannel/on-value-velocity-and-monetary-theory-a-new-approach-to-cryptoasset-valuations-32c9b22e3b6f, 2018.<br />
 [10] Matus Lestan, Joe Urgo, Alexander Khoriaty. district0x Network: A cooperative of decentralized marketplaces and communities, 2017.<br />
-[11] 黄世亮. 拒绝付款套利攻击——比特币场外交易的一种攻击手法及防范, https://mp.weixin.qq.com/s？biz=MzIxNTA0NDQzMA==&mid=2651798518&idx=1&sn=4e91bac98cea5bc600e8429f1af3a728, 2017.<br />
+[11] Shiliang Huang. Refusal of payment arbitrage attack -- An attack technique in OTC transactions and precautions for it, https://mp.weixin.qq.com/s?__biz=MzIxNTA0NDQzMA==&mid=2651798518&idx=1&sn=4e91bac98cea5bc600e8429f1af3a728, 2017.<br />
 [12] RSK Labs. Sidechains, Drivechains, and RSK 2-Way peg Design, https://www.rsk.co/blog/sidechains-drivechains-and-rsk-2-way-peg-design, 2017.<br />
