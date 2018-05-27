@@ -1093,6 +1093,7 @@ pubsub.emit('orderList', newOrders);
 
 <div class="tg-wrap"><table>
   <tr>
+    <td rowspan="3">哥德尔</td>
     <td rowspan="3">2018.Q2</td>
     <td>白皮书发布</td>
   </tr>
@@ -1103,6 +1104,7 @@ pubsub.emit('orderList', newOrders);
     <td>启动全球社群运营，包括美国，中国，加拿大，澳大利亚，俄罗斯等国家</td>
   </tr>
   <tr>
+    <td rowspan="6">埃舍尔</td>
     <td rowspan="4">2018.Q3</td>
     <td>开放交易商申请</td>
   </tr>
@@ -1123,6 +1125,7 @@ pubsub.emit('orderList', newOrders);
     <td>发布GEB协议内测版</td>
   </tr>
   <tr>
+    <td rowspan="3">巴赫</td>
     <td rowspan="3">2019.Q1</td>
     <td>上线至少10家GEB认证交易所</td>
   </tr>
@@ -1133,14 +1136,14 @@ pubsub.emit('orderList', newOrders);
     <td>官方交易所试运行，模拟交易</td>
   </tr>
   <tr>
-    <td rowspan="2">2019.Q1</td>
+    <td rowspan="3">道</td>
+    <td rowspan="3">2019.Q2</td>
     <td>GEB Network主网上线</td>
   </tr>
   <tr>
     <td>GEB官方交易所正式运行</td>
   </tr>
   <tr>
-    <td>2019.Q2</td>
     <td>设立GEB Network北美、欧洲办公室，扩展全球业务</td>
   </tr>
 </table></div>
