@@ -992,7 +992,7 @@ pubsub.emit('orderList', newOrders);
 ### 7.2. The Attitudes of the Countries in the World to Blockchain
 <p>In general, most countries have a welcome attitude towards cryptocurrency and Blockchain technologies, and have begun to attempt to promote the application of cryptocurrency and to explore and innovate technology:</p>
 
-- **China**: Although China is currently keeping a conservative attitude towards the exchange of cryptocurrency, it has never stopped the research of the underlying technology of the Blockchain at the government level.
+- **China: Although China is currently keeping a conservative attitude towards the exchange of cryptocurrency, it has never stopped the research of the underlying technology of the Blockchain at the government level.**
 
 <p>In February, 2016, Zhou Xiaochuan, the central bank governor of China, stated that the digital currency must be issued by the central bank, and the Blockchain has become an optional technology for the development of digital currency.</p>
 
@@ -1002,25 +1002,25 @@ pubsub.emit('orderList', newOrders);
 
 <p>In September, 2017, the People's Bank of China and other seven ministries jointly issued a document deciding that ICO is an unauthorized illegal public financing act. It is suspected of illegally selling token tickets, illegally issuing securities, and illegally raising funds, financial fraud and pyramid schemes.</p>
 
-- **Russia**: Russia's attitude is more complex, and Russia has banned citizens from holding and trading Bitcoin, but it's very popular for Blockchain technology.
+- **Russia: Russia's attitude is more complex, and Russia has banned citizens from holding and trading Bitcoin, but it's very popular for Blockchain technology.**
 
 <p>In June, 2017, Russian President Vladimir Putin met the founder of the Ethereum, Vitalic Buterin.</p>
 
 <p>In August, 2017, Russia's National Development Bank o and the Ethereum Foundation have reached strategic cooperation.</p>
 
-- **South Korea**: South Korea is supporting the Blockchain at present, and has strengthened supervision over digital assets such as Bitcoin and Ethereum.
+- **South Korea: South Korea is supporting the Blockchain at present, and has strengthened supervision over digital assets such as Bitcoin and Ethereum.**
 
 <p>In February, 2016, South Korea's Central Bank proposed to encourage exploration of Blockchain technology in the report.</p>
 
 <p>In September, 2017, South Korea FSC announced how to regulate digital currencies, such as Bitcoin and ether. South Korea has stepped up its regulation to investigate illegal trade in money-laundering, illicit financing and other digital currencies.</p>
 
-- **India**: India, as a populous country and a powerful software development country, has always attached importance to the application of Blockchain technology.
+- **India: India, as a populous country and a powerful software development country, has always attached importance to the application of Blockchain technology.**
 
 <p>In January, 2017, India's Central Bank issued a comprehensive Blockchain white paper, arguing that the time for the Blockchain to launch digital currencies in India was ripe.</p>
 
 <p>In June, 2017, the Government Committee of India announced its support for the establishment of a dedicated task group to regulate Bitcoin, and the creation of regulatory framework plans to fully complete the legalization of Bitcoin in a short time.</p>
 
-- **Australia**: Australia pays more attention to the application of Blockchain technology and the formulation of standards.
+- **Australia: Australia pays more attention to the application of Blockchain technology and the formulation of standards.**
 
 <p>In April, 2016, Australian Bureau of Standards ed for the formulation of global ISO Blockchain standards.</p>
 
@@ -1028,17 +1028,151 @@ pubsub.emit('orderList', newOrders);
 
 <p>In August, 2017, Australian Government announced the incorporation of digital currencies and exchanges in the regulation of Australia Transaction Data Analysis Center. The Australian stock exchanges and other institutions are using Blockchain technology to conduct transactions.</p>
 
-- **UK**: Britain is the first country in Europe to conduct research and validation of the Blockchain.
+- **UK: Britain is the first country in Europe to conduct research and validation of the Blockchain.**
 
 <p>On January 19, 2016, the UK government took the lead in publishing the 88-page Distributed Ledger Technology: Beyond the Blockchain white paper, while actively assessing the potential of Blockchain technology, considering that it will be used in the field of reducing financial fraud and reducing costs.</p>
 
 <p>In March, 2016, ECB publicly announced in this consulting report The future vision of the euro system —— The future of European financial market infrastructure that it is exploring ways to use Blockchain technology for its own use.</p>
 
-- **Netherlands**: The Dutch Central Bank issued a view that Blockchain technology could improve its financial business quality.
+- **Netherlands: The Dutch Central Bank issued a view that Blockchain technology could improve its financial business quality.**
 
 <p>In September, 2016, a Blockchain park was established in the Netherlands, and banks and financial companies were cooperating to develop the application of Blockchain technology in the field of payment and general finance.</p>
 
+- **Germany: Germany will seize the opportunity and meet the challenges under the new situation of the Blockchain.**
 
+<p>In November, 2016, Deutsche Bundesbank and Frankfurt School of Financial Management jointly convened a conference of Blockchain technology opportunities and challenges. The main purpose of the conference is to research the potential application of distributed Ledger, including cross-border payment, cross-bank transfers and the storage of trade data, etc.
+</p>
+
+- **USA: USA supports the development of Blockchain through legislation.**
+
+<p>In June, 2014, the governor of California, USA, signed a legal document numbered AB129 to protect the legalization of the California Bitcoin and other digital currency transactions.</p>
+
+<p>In June, 2016, and USA Department of Homeland Security subsidized six development companies that are dedicated to government management applications.</p>
+
+<p>In February, 2017, Arizona, USA, passed Blockchain Signature and Smart Contract Legitimacy Act. In the same month, ONC, the USA healthcare department, was developing a marathon using health-care hackers to apply Blockchain technology to health care. The USA Congress announced the establishment of the Congress Blockchain decision-making committee and recognized the potential of Blockchain and ed for the application of Blockchain technology in the public sector, while attitudes towards Bitcoin, USA were also encouraged to invest and enforce strict supervision.</p>
+
+<p>In July, 2017, the SEC determined that the Ethereum token belongs to the securities, and the issuer shall handle the registration of securities issuance in accordance with the law. In the same month, the CFTC approved LedgerX to provide a liquidation service with an option and derivatives linked to the cryptocurrency market.</p>
+
+- **Japan: Japan has a very positive attitude. Japan's Central Bank is trying some Blockchain projects, which is largely based on the application of digital assets such as Bitcoin.**
+
+<p>In March, 2016, the Japanese Cabinet voted for Bitcoin and digital currency as digital equivalent currencies.</p>
+
+<p>On April 1, 2017, Japan implemented The Payment Services Act and formally recognized that Bitcoin is a legal means of payment and provides clear regulatory requirements for the digital asset exchanges.</p>
+
+<p>In July, 2017, Japan's new consumption tax officially took effect, and Bitcoin transactions would no longer need to pay 8% consumption tax.</p>
+
+- **Singapore: Singapore is a fertile soil for Blockchain. The country’s Prime Minister, Li Xianlong, publicly urged the Singapore financial sectors to keep pace with the development of Blockchain technology. As a result, Singapore is far more open to regulatory policies of Blockchain securities financial innovation than other Asian countries.**
+
+<p>In June,2016, Singapore's Monetary Authority, has launched Sandbox mechanism, which allows the business to be engaged in conflict with existing laws and regulations as long as any financial science and technology company registered under the law has been reported in advance, even if the related business is later officially terminated, the relevant legal responsibilities are not pursued.. Through this Sandbox mechanism, the Singapore government is able to encourage enterprises to carry out various financial innovation of Blockchain within a controlled range.</p>
+
+<p>According to the above analysis, the GEB team will strictly abide by the relevant policies and regulations of all countries in the world when issuing tokens in the future, and begin to develop from Singapore with relatively open digital monetary policy to other countries.</p>
+
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/world.jpg)
+
+### 7.3. SWOT Analysis
+
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/swot.jpg)
+
+<br /><br />
+## 8. Roadmap
+
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/roadmap-horizontal.jpg)
+
+<div class="tg-wrap"><table>
+  <tr>
+    <td rowspan="3">Gödel</td>
+    <td rowspan="3">2018.Q2</td>
+    <td>Publishment of White Paper.</td>
+  </tr>
+  <tr>
+    <td>Official Website of GEB Network came to be online.</td>
+  </tr>
+  <tr>
+    <td>Start the global community operations, including USA, China, Canada, Australia, Russia, etc.</td>
+  </tr>
+  <tr>
+    <td rowspan="6">Escher</td>
+    <td rowspan="4">2018.Q3</td>
+    <td>Open dealer application.</td>
+  </tr>
+  <tr>
+    <td>DAICO startup is divided into two stages: Phase I and Phase II.</td>
+  </tr>
+  <tr>
+    <td>GEB token on-line exchange.</td>
+  </tr>
+  <tr>
+    <td>Smart contract exploitation.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">2018.Q4</td>
+    <td>Platform Software exploitation.</td>
+  </tr>
+  <tr>
+    <td>Publish the internal testing version of the GEB Protocol.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Bach</td>
+    <td rowspan="3">2019.Q1</td>
+    <td>At least 10 GEB certified exchanges to be online.</td>
+  </tr>
+  <tr>
+    <td>Publish the public testing version of the GEB protocol, and platform open source.</td>
+  </tr>
+  <tr>
+    <td>Official Exchanges try running and simulate transactions.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Tao</td>
+    <td rowspan="3">2019.Q2</td>
+    <td>Main network of GEB Network is to be online.</td>
+  </tr>
+  <tr>
+    <td>Official exchange of GEB is to be formally operating.</td>
+  </tr>
+  <tr>
+    <td>Establishment of GEB Network North America and Europe Offices to expand global business.</td>
+  </tr>
+</table></div>
+
+<br /><br />
+## 9. Team Introduction
+
+- CEO: Wei Zhu
+
+<p>He has a bachelor degree in Microelectronics form Fudan University and has more than 10 years of experience in technology R&D and technology management in the Internet industry. He is a Blockchain and artificial intelligence preacher. He is also a growth hacker and lifelong learners. He founded Xinpu IT consulting, and is the country's earliest enterprise to engage in Blockchain technical consulting. He was the chief architect of Qihoo 360 WiFi business, Technology Director of DeNA China, and presided over R&D management of 100 million level user products. He is the pioneer of technological innovation advocating the restructuring of the Internet infrastructure from the protocol layer. He has deep research and unique insight into the theory of Blockchain, distributed computing, event tracing, Turing calculation, deep study and so on.</p>
+
+- CTO: Ching Zhu
+
+<p>She obtained the highest honors of Electronic Science and Technology University —— "Outstanding Student" . SHe was the founder of the chainboard. io. She served as the technical director of Bingjian science and technology and designed and led the research and development of wind-control integrated platform and large-scale data platform. She has rich experience in the design of internet and wind-control model, and the research and development of micro-service system architecture. In 2016, he began to lead the team to master and successfully develop the industry application based on Blockchain technology, and participate in the operation of the Blockchain project of the listed company. She has served as a special technical consultant to provide architectural consulting and design to a number of listed companies and has shared the theme among several well-known technical forums as a lecturer.</p>
+
+- CPO: Jeremy Lan
+
+<p>Co-founder and CTO of Harrole, Senior Blockchain engineer. He is interested in logic and strategic research. He has rich experience in internet practice and deep technical insight and has been in charge of cloud architecture design and product development in Hiscene, a well-known artificial intelligence company. Immersed in the Blockchain field for many years, he is familiar with the Blockchain underlying technology, multi-currency wallet and exchange, as well as all kinds of safety protection. In addition, he also participated in Metaverse Blockchain development and is the Core Team member. At present, He is actively studying the problems in the project such as scalability of blockchain and the ordering scheme of DAG partial sequence network.</p>
+
+- COO: Yuanfei Zhu
+
+- CFO: Jiang Chun
+
+<p>She graduated from Fudan University, and obtained a master degree in International Trade and Economics from Duke University. He worked as a financial analyst at Morgan Stanley in London. He served in the World Bank and engaged in global value chain research, and analyzed the impact of China's economic and financial policies on industrial chain upgrading and globalization.</p>
+
+<br /><br />
+## 10. Advisors
+
+<br /><br />
+## 11. References
+[1] W3C. JSON-LD 1.0, https://www.w3.org/TR/json-ld/, 2014.<br />
+[2] Jorge Izquierdo. The new operating system for protocols and DApps, https://blog.aragon.one/introducing-aragonos-3-0-alpha-the-new-operating-system-for-protocols-and-dapps-348f7ac92cff, 2018.<br />
+[3] BitcoinWiki. Payment methods, https://en.bitcoin.it/wiki/Payment_methods, 2016.<br />
+[4] Joseph Poon, Thaddeus Dryja. The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments, 2016.<br />
+[5] Vitalik Buterin. A Next-Generation Smart Contract and Decentralized Application Platform, https://github.com/ethereum/wiki/wiki/White-Paper, 2014.<br />
+[6] Vitalik Buterin. Explanation of DAICOs, https://ethresear.ch/t/explanation-of-daicos/465, 2018.<br />
+[7] Vitalik Buterin. On Medium-of-Exchange Token Valuations, https://vitalik.ca/general/2017/10/17/moe.html, 2017.<br />
+[8] Conner Fromknecht. Connecting Blockchains: Instant Cross-Chain Transactions On Lightning, https://blog.lightning.engineering/announcement/2017/11/16/ln-swap.html, 2017.<br />
+[9] Alex Evans. On Value, Velocity and Monetary Theory, https://medium.com/blockchannel/on-value-velocity-and-monetary-theory-a-new-approach-to-cryptoasset-valuations-32c9b22e3b6f, 2018.<br />
+[10] Matus Lestan, Joe Urgo, Alexander Khoriaty. district0x Network: A cooperative of decentralized marketplaces and communities, 2017.<br />
+[11] Shiliang Huang. Refusal of Arbitrage Payment Arbitrage - An Attack Technique and Prevention of Bitcoin OTC, https://mp.weixin.qq.com/s？biz=MzIxNTA0NDQzMA==&mid=2651798518&idx=1&sn=4e91bac98cea5bc600e8429f1af3a728, 2017.<br />
+[12] RSK Labs. Sidechains, Drivechains, and RSK 2-Way peg Design, https://www.rsk.co/blog/sidechains-drivechains-and-rsk-2-way-peg-design, 2017.<br />
 
 
 
