@@ -356,7 +356,7 @@
 - Exchange – must be approved by GEB Foundation and mortgage guarantee deposit.
 - Juror – must be approved by GEB Foundation, mortgage guarantee deposit, and anonymously and randomly distributed for arbitration.
 - Orders with digital signature – evidence in which the transaction details cannot be forged.
-- PageSigner evidence – evidence in which the transfer of fiat currency cannot be forged.
+- <a href="https://tlsnotary.org/pagesigner.html">PageSigner</a> evidence – evidence in which the transfer of fiat currency cannot be forged.
 - Transaction amount limit – limit the maximum transaction amount (50ETH) to reduce fraudulent potential incomes.
 - Smart contract with time lock (Timelock Contract) – solve the risk that the counterparty viciously withdraws from the transaction.
 - Only support the irreversible fiat currency transfer to reduce the risk of refund (see https://en.bitcoin.it/wiki/Payment_methods).
@@ -424,9 +424,9 @@ mapping(bytes32 => Order) internal OrderList
 <p>There is a problem existing in this method. It may cause that when Maker tries to cancel the order, Taker tries to fill in the same order, which will result in a failed transaction among the two transactions, and waste gas. The uncertainty of transaction mining order may result in unexpected results sometimes, and if there are a large number of transactions to be processed on the Ethereum blockchain, such uncertainty may increase.</p>
 
 #### 3.5.6. WETH Contract
-<p>ERC20 builds a standard interface for Ethereum token, to allow the interaction between the Ethereum smart contract and any token conforming to the standard. ETH is the base currency of Ethereum, and doesn’t conform to ERC 20 token standard. Many DApp developers finds that by abstracting ETH as the token compatible with ERC20, smart contract can be simplified by removing the business logic code for ETH processing.</p>
+<p><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md">ERC20</a> builds a standard interface for Ethereum token, to allow the interaction between the Ethereum smart contract and any token conforming to the standard. ETH is the base currency of Ethereum, and doesn’t conform to ERC20 token standard. Many DApp developers finds that by abstracting ETH as the token compatible with ERC20, smart contract can be simplified by removing the business logic code for ETH processing.</p>
 
-<p>We use WETH contract deployed by Makerdao team to implement the above-mentioned function.</p>
+<p>We use WETH contract deployed by <a href="https://medium.com/@MakerDAO">Makerdao</a> team to implement the above-mentioned function.</p>
 
 **Contract deployment address:**<br />
 - Mainnet：[0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
@@ -446,7 +446,7 @@ mapping(bytes32 => Order) internal OrderList
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/cross-chain-vertical.jpg)
 
-#### 3.6.2.  Lighting Atomic Swap Technology (Evolution Solution)
+#### 3.6.2. Lighting Atomic Swap Technology (Evolution Solution)
 <p>To ensure the safety of cross-chain transaction, the transaction velocity of 2-way peg technology must meet the following inequation:</p>
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7Bv%7D%5Cgeq%20%5Cfrac%7B1%7D%7Bv1%7D&plus;%5Cfrac%7B1%7D%7Bv2%7D)
@@ -516,7 +516,7 @@ mapping(bytes32 => Order) internal OrderList
 - GEB Network global parameter (scope of tokens which can be mortgaged, mortgage rate, compulsory liquidation limit, service charge, transfer channels in which fiat currency can be used etc.) modification proposal.
 - GEB Network temporary open and close proposal.
 
-<p>It largely depends on a robust decentralized ecological system to promote liquidity whether GEB Network can be recognized by the public eventually. The roles participating in ecological construction are not limited to GEB Token holders, but also developers, terminal users etc. To effectively and widely take advice, we follow the concept of distributed governance to establish a set of standard decision-making procedures, and host them in Aragon, which involve member and authority management with Aragon Group, financial management with Aragon Finance, and other management modules.</p>
+<p>It largely depends on a robust decentralized ecological system to promote liquidity whether GEB Network can be recognized by the public eventually. The roles participating in ecological construction are not limited to GEB Token holders, but also developers, terminal users etc. To effectively and widely take advice, we follow the concept of distributed governance to establish a set of standard decision-making procedures, and host them in Aragon, which involve member and authority management with <a href="https://wiki.aragon.one/dev/apps/group/">Aragon Group</a>, financial management with <a href="https://wiki.aragon.one/dev/apps/finance/">Aragon Finance</a>, and other management modules.</p>
 
 <p>With the release of AragonOS release 3.0, the voting management has become a more flexible entrance for DAO governance, we can manage different voting scenarios in accordance with ACL self-defined parameter rules, or easily forward the voting results to different DAO management application programs with Forwarders. A program for a self-defined parameter rule verification is as follows:</p>
 
@@ -582,20 +582,20 @@ function verifyCombinatedParams() {
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/network-structure.jpg)
 
 ### 5.2. Juror Network
-<p>The smart contract can resolve disputes by controlling transactions on the chain, but it cannot control transactions under the chain. The juror network is used to handle situations which cannot be judged by the smart contract and submit the results to the smart contract. When users apply for arbitration during the transaction, the juror network will intervene. The juror network is designed to establish a decentralized dispute resolution mechanism through economic incentives, avoiding absolute trust in a single arbitral institution and thereby having a higher degree of security. The full set of arbitration software runs on the infrastructure built by Ethereum and IPFS. Through a simple user interface, the juror can easily receive the evidence submitted by the parties to the dispute and arbitrate. All arbitration records will be permanently stored on the Ethereum blockchain. All tamper-proof cryptographic evidence (generated by PageSigner) will be permanently stored on the IPFS.</p>
+<p>The smart contract can resolve disputes by controlling transactions on the chain, but it cannot control transactions under the chain. The juror network is used to handle situations which cannot be judged by the smart contract and submit the results to the smart contract. When users apply for arbitration during the transaction, the juror network will intervene. The juror network is designed to establish a decentralized dispute resolution mechanism through economic incentives, avoiding absolute trust in a single arbitral institution and thereby having a higher degree of security. The full set of arbitration software runs on the infrastructure built by Ethereum and IPFS. Through a simple user interface, the juror can easily receive the evidence submitted by the parties to the dispute and arbitrate. All arbitration records will be permanently stored on the Ethereum blockchain. All tamper-proof cryptographic evidence (generated by <a href="https://tlsnotary.org/pagesigner.html">PageSigner</a>) will be permanently stored on the IPFS.</p>
 
-#### 5.2.1 Juror Application
+#### 5.2.1. Juror Application
 <p>To join the GEB juror network, you need to first submit an application to GEB DAO and provide proof of identity. After passing the review, you need to participate in online training and assessment of GEB juror. After the assessment is passed, you are required to sign a contract online with the GEB Foundation and purchase a certain number of GEB Token to mortgage to the GEB Foundation. The juror is not allowed to use the mortgage token during the contract term. If the contract will not be renewed after its expiry, the GEB Foundation will return the mortgage token to the juror.</p>
 
-#### 5.2.2 Arbitration
-- **Phase1**: The user initiates an arbitration request and the arbitration software will notify both parties to the dispute, requesting both parties to submit a cryptographic evidence in the prescribed format within 24 hours (using PageSigner, a Firefox/Chrome plug-in that allows the user to generate tamper-evident webpage evidence) and other supplementary evidences (text, pictures, voice, video, etc.). All evidences are packaged, signed and uploaded to IPFS. At the same time, the arbitration software will randomly select three jurors from the contracted jurors and notify them to prepare for the arbitration(excluding the jurors' possibility of arbitrating themselves through KYC data verification). The juror must response within 8 hours. If the juror does not response timely, it will be fined X (mortgage token), and the arbitration software will re-select the juror. The entire process must be completed within 24 hours.
+#### 5.2.2. Arbitration
+- **Phase1**: The user initiates an arbitration request and the arbitration software will notify both parties to the dispute, requesting both parties to submit a cryptographic evidence in the prescribed format within 24 hours (using <a href="https://tlsnotary.org/pagesigner.html">PageSigner</a>, a Firefox/Chrome plug-in that allows the user to generate tamper-evident webpage evidence) and other supplementary evidences (text, pictures, voice, video, etc.). All evidences are packaged, signed and uploaded to IPFS. At the same time, the arbitration software will randomly select three jurors from the contracted jurors and notify them to prepare for the arbitration(excluding the jurors' possibility of arbitrating themselves through KYC data verification). The juror must response within 8 hours. If the juror does not response timely, it will be fined X (mortgage token), and the arbitration software will re-select the juror. The entire process must be completed within 24 hours.
 - **Phase2**: The jurors accept the evidences submitted by both parties to the dispute, verify the signature and review the evidences. The jurors can also request to review the KYC data of both parties. In order to avoid conspiracy to commit fraud, the jurors cannot communicate with each other nor can they directly communicate with both parties. The juror must complete the review within 8 hours and make an independent conclusion (may support the disputing party or may not be able to make a decision). The juror will be fined if it do not make a decision timely. Subsequently, the arbitration software will judge the arbitration result as follows:
     - If three jurors support the same party, such party wins and the arbitration ends. The arbitration software informs the DEX Contract of the arbitration results.
     - Otherwise, the arbitration will go to Phase3.
 - **Phase3**: If the arbitration does not end in Phase2, then the evidences submitted by both parties and the decisions of the three jurors will be submitted to the GEB DAO Committee for final decision. The GEB DAO Committee may request both parties to submit additional evidences, and may even request video s or screen sharing with both parties when necessary to ensure the conclusion is correct. All evidences and video materials will be uploaded to IPFS. There is no fixed time limit for phase 3, and the arbitration will continue until the GEB DAO Committee makes a final decision.
 
-#### 5.2.3 Economic Incentives and Deposits
-<p>In order to motivate the jurors to exercise the jury power properly, the jurors need to mortgage a certain amount of GEB Token as deposit in GEB DAO. After each arbitration is completed, the arbitration system rewards or punishes each of the three jurors (A, B, and C) according to their decision and <b>the final result</b>. The specific rules are as follows (+X indicates reward X. ,-X means fine X, 0 means neither rewards nor punishments):</p>
+#### 5.2.3. Economic Incentives and Deposits
+<p>In order to motivate the jurors to exercise the jury power properly, the jurors need to mortgage a certain amount of GEB Token as deposit in GEB DAO. After each arbitration is completed, the arbitration system rewards or punishes each of the three jurors (A, B, and C) according to their decision and <b>the final result R</b>. The specific rules are as follows (+X indicates reward X. ,-X means fine X, 0 means neither rewards nor punishments):</p>
 
 <div class="tg-wrap"><table align="center">
   <tr>
@@ -766,7 +766,7 @@ function verifyCombinatedParams() {
 
 <p>Because the order of A, B, and C is irrelevant, the above table already contains all possible combinations of the decisions of the three jurors. The fact that the jurors did not make a decision in the time limit is rare, as this would result in the juror being subject to double the fine of tokens.</p>
 
-#### 5.2.4 Exit Mechanism
+#### 5.2.4. Exit Mechanism
 <p> If the following circumstances occur during the contract term, an exit mechanism will be initiated.</p>
 
 - **The juror applies for exit**: The juror who is not within an arbitration period may apply for exit to GEB DAO. After reviewed by the GEB DAO Committee, if it is confirmed that the juror has no misconducts, the application will be past and the remaining mortgaged tokens and reward tokens will be returned.
@@ -785,7 +785,7 @@ function verifyCombinatedParams() {
 ### 5.4. Decentralized Authentication
 <p>In order to ensure transaction security, users shall complete authentication before using the GEB Network. The traditional KYC/AML system stores user identity data on a centralized server, which leads to a serious risk of user privacy leakage and it has aggravated the inequality of the right between users and service providers. We will return the ownership of user data on GEB Network to the user. To implement this purpose, we designed a set of decentralized authentication protocols for GEB Network. Users can register, request, send certificates, and securely manage their key and privacy data on the GEB Network.</p>
 
-#### 5.4.1 DID and DID Documents
+#### 5.4.1. DID and DID Documents
 <p>Our authentication protocol design refers to the work of the W3C Credentials Community Group on Decentralized Identifiers and Identity Credentials (see https://w3c-ccg.github.io/did-spec/, https://opencreds.org/specs/source/identity-credentials/ ). The identity is identified by a decentralized identifier (DID) and points to a DID document. The combination of the DID and its associated DID document forms the root record of the decentralized identifier.</p>
 
 <p>The DID generation methods currently supported by GEB Network are as follows:</p>
@@ -800,7 +800,7 @@ address = 40*HEXDIG
 - The network currently only supports Ethereum's "mainnet", "ropsten", "rinkeby", and "kovan", but it can be extended in the future to support arbitrary Ethereum instances (including private instances).
 - address is the Ethereum address HEX encoded (without 0x prefix).
 
-<p>The DID document shall be a single JSON object, the format of which is specified in JSON-LD. JSON-LD is a format used for mapping JSON data to the RDF semantic graph model defined by [JSON-LD]. A basic example of a DID document is shown as follows:</p>
+<p>The DID document shall be a single JSON object, the format of which is specified in <a href="https://json-ld.org/">JSON-LD</a>. <a href="https://json-ld.org/">JSON-LD</a> is a format used for mapping JSON data to the RDF semantic graph model defined by <a href="https://www.w3.org/TR/json-ld/">[JSON-LD]</a>. A basic example of a DID document is shown as follows:</p>
 
 ```json
 {
@@ -864,7 +864,7 @@ address = 40*HEXDIG
 
 <p>The DID document uses the SHA256 hash as the file name, with the public key encrypted and stored on the IPFS. The mapping relationship between DID and DID documents is stored in the etcd cluster maintained by GEB Certified Exchange (The storage of this mapping relationship in the Ethereum smart contract will result in transaction fees. Considering most of the GEB users creating their identities initially do not hold the ether, this will significantly increase the threshold for the user to use GEB Network). Users can create identities (DID documents) through GEB DApp (WEB/Mobile) and bind with an Ethereum address (DID). After the identity is successfully created, the user can authorize a GEB exchange to access its identity data to complete KYC. After successfully authenticated, the GEB Exchange will issue a digital certificate to the user. The user may store such digital certificate in the DID document, which can be used for identification in the future.</p>
 
-#### 5.4.2 GEB Connect
+#### 5.4.2. GEB Connect
 <p>We plan to upgrade the GEB decentralized authentication protocol to GEB Connect in the future (2019-2020), which is an Ethereum identity management infrastructure, allowing users to log in to all Ethereum DAPPs using a unique DID, register their identities, request and send certificates of identity, send Ethereum transactions, share data with anyone they trust, and manage their key and private data safely. Some other projects, such as uport and kec.legal, are also making similar attempts, but we think it is difficult to succeed for a decentralized identity authentication project lacking use scenario and user size base. The development of GEB Connect will rely on the huge ecological network and strict KYC requirements of the GEB Network project. With the expansion of the scale of GEB Network users, GEB Connect will be widely applied in the fields of finance, insurance, recruitment, e-commerce, credit, etc.</p>
 
 ### 5.5. Shared Liquidity Pool
@@ -873,7 +873,7 @@ address = 40*HEXDIG
 - If an exchange's liquidity is insufficient, he can put his own resting orders on the shared liquidity pool and the other exchanges can pick orders from the shared liquidity pool to their own exchange for presentation. If the order is done, the two exchanges will get the commission of the transaction in proportion to the value of the order attribute in margin Split Percentage.
 - If the user wants to borrow fiat currency from an exchange where the fiat currency is not in circulation, the exchange can provide a channel that directly forwards the order to the shared liquidity pool, prompting the transaction to be quickly traded on other eligible exchanges to improve the user experience. The transaction commission is still charged in proportion by the two exchanges based on the value of the order attribute in margin Split Percentage.
 
-#### 5.5.1 Shared Orders
+#### 5.5.1. Shared Orders
 <p>We said that the orders that the exchanges want to place into the shared liquidity pool are shared orders. Its format is as follows:</p>
 
 ```protobuf
@@ -888,7 +888,7 @@ message sharedOrder {
 }
 ```
 
-#### 5.5.2 Micro-services and Clusters
+#### 5.5.2. Micro-services and Clusters
 <p>In the GEB Network, the shared liquidity pool exists in the form of a service organization. In order to be able to expand and upgrade service better in the future, we have adopted micro-service architecture design. The nodes participating in the maintenance of the shared liquidity pool need to pay the security bond and submit the server parameter configuration and other related materials to the GEB Foundation. After passing the certification, they can join the service cluster. For honest nodes that provide services for long-term stability, we use GEB Token for settlement through quality-of-service-weighted charging or on-time charging.</p>
 
 <p>From a simple and secure perspective, to support the RESTful API access and optional SSL client certificate authentication, we use etcd as the primary technology for the shared liquidity pool. Etcd is a high-availability KV storage system that can be used to share configuration and service discovery. In the persistence layer, the service list and the order list are mainly maintained, the service list is used for service searching when the exchange consumption data is used, such as an exchange initiative choosing orders, a hot spot account configuration, and the like; The order list is a collection of orders placed by the Exchange to a shared liquidity pool, and in order to ensure the source of orders, each order in the order list is signed by a private key of the source exchange for a parameter hash other than the field origin ExAddr. Therefore, it is also necessary for the exchange to select the order to check the signature, if the checking is not passed, the feedback order is invalid, and the cluster service will be updated in the order list. In the service layer, in general, a change in the Topic global version number is broadcast by using the Pub-Sub mode. The so-ed Topic global version number update is a change in the Topic directed any service list or order list, and this Topic version number is incremented. The exchange that receives the subscribed Topic version number changes can request services to the target server.</p>
@@ -1140,24 +1140,28 @@ pubsub.emit('orderList', newOrders);
 
 - CEO: Wei Zhu
 
-<p>He has a bachelor degree in Microelectronics form Fudan University and has more than 10 years of experience in technology R&D and technology management in the Internet industry. He is a Blockchain and artificial intelligence preacher. He is also a growth hacker and lifelong learners. He founded Xinpu IT consulting, and is the country's earliest enterprise to engage in Blockchain technical consulting. He was the chief architect of Qihoo 360 WiFi business, Technology Director of DeNA China, and presided over R&D management of 100 million level user products. He is the pioneer of technological innovation advocating the restructuring of the Internet infrastructure from the protocol layer. He has deep research and unique insight into the theory of Blockchain, distributed computing, event tracing, Turing calculation, deep study and so on.</p>
+<p>Mr. Wei Zhu has a bachelor degree in Microelectronics form Fudan University and has more than 10 years of experience in technology R&D and technology management in the Internet industry. He is a Blockchain and artificial intelligence preacher. He is also a growth hacker and lifelong learners. He founded Xinpu IT consulting, and is the country's earliest enterprise to engage in Blockchain technical consulting. He was the chief architect of Qihoo 360 WiFi business, Technology Director of DeNA China, and presided over R&D management of 100 million level user products. He is the pioneer of technological innovation advocating the restructuring of the Internet infrastructure from the protocol layer. He has deep research and unique insight into the theory of Blockchain, distributed computing, event tracing, Turing calculation, deep study and so on.</p>
 
 - CTO: Ching Zhu
 
-<p>She obtained the highest honors of Electronic Science and Technology University —— "Outstanding Student" . SHe was the founder of the chainboard. io. She served as the technical director of Bingjian science and technology and designed and led the research and development of wind-control integrated platform and large-scale data platform. She has rich experience in the design of internet and wind-control model, and the research and development of micro-service system architecture. In 2016, he began to lead the team to master and successfully develop the industry application based on Blockchain technology, and participate in the operation of the Blockchain project of the listed company. She has served as a special technical consultant to provide architectural consulting and design to a number of listed companies and has shared the theme among several well-known technical forums as a lecturer.</p>
+<p>Ms. Ching Zhu obtained the highest honors of Electronic Science and Technology University —— "Outstanding Student" . SHe was the founder of the chainboard. io. She served as the technical director of Bingjian science and technology and designed and led the research and development of wind-control integrated platform and large-scale data platform. She has rich experience in the design of internet and wind-control model, and the research and development of micro-service system architecture. In 2016, she began to lead the team to master and successfully develop the industry application based on Blockchain technology, and participate in the operation of the Blockchain project of the listed company. She has served as a special technical consultant to provide architectural consulting and design to a number of listed companies and has shared the theme among several well-known technical forums as a lecturer.</p>
 
 - CPO: Jeremy Lan
 
-<p>Co-founder and CTO of Harrole, Senior Blockchain engineer. He is interested in logic and strategic research. He has rich experience in internet practice and deep technical insight and has been in charge of cloud architecture design and product development in Hiscene, a well-known artificial intelligence company. Immersed in the Blockchain field for many years, he is familiar with the Blockchain underlying technology, multi-currency wallet and exchange, as well as all kinds of safety protection. In addition, he also participated in Metaverse Blockchain development and is the Core Team member. At present, He is actively studying the problems in the project such as scalability of blockchain and the ordering scheme of DAG partial sequence network.</p>
+<p>Mr. Jeremy Lan is the Co-founder and CTO of Harrole, a Senior Blockchain engineer. He is interested in logic and strategic research. He has rich experience in internet practice and deep technical insight and has been in charge of cloud architecture design and product development in Hiscene, a well-known artificial intelligence company. Immersed in the Blockchain field for many years, he is familiar with the Blockchain underlying technology, multi-currency wallet and exchange, as well as all kinds of safety protection. In addition, he also participated in Metaverse Blockchain development and is the Core Team member. At present, He is actively studying the problems in the project such as scalability of blockchain and the ordering scheme of DAG partial sequence network.</p>
 
 - COO: Yuanfei Zhu
 
 - CFO: Jiang Chun
 
-<p>She graduated from Fudan University, and obtained a master degree in International Trade and Economics from Duke University. He worked as a financial analyst at Morgan Stanley in London. He served in the World Bank and engaged in global value chain research, and analyzed the impact of China's economic and financial policies on industrial chain upgrading and globalization.</p>
+<p>Ms. Jiang Chun graduated from Fudan University, and obtained a master degree in International Trade and Economics from Duke University. She worked as a financial analyst at Morgan Stanley in London. She served in the World Bank and engaged in global value chain research, and analyzed the impact of China's economic and financial policies on industrial chain upgrading and globalization.</p>
 
 <br /><br />
 ## 10. Advisors
+
+- Benjamin Gu
+
+- Yang Zhao
 
 <br /><br />
 ## 11. References
@@ -1171,7 +1175,7 @@ pubsub.emit('orderList', newOrders);
 [8] Conner Fromknecht. Connecting Blockchains: Instant Cross-Chain Transactions On Lightning, https://blog.lightning.engineering/announcement/2017/11/16/ln-swap.html, 2017.<br />
 [9] Alex Evans. On Value, Velocity and Monetary Theory, https://medium.com/blockchannel/on-value-velocity-and-monetary-theory-a-new-approach-to-cryptoasset-valuations-32c9b22e3b6f, 2018.<br />
 [10] Matus Lestan, Joe Urgo, Alexander Khoriaty. district0x Network: A cooperative of decentralized marketplaces and communities, 2017.<br />
-[11] Shiliang Huang. Refusal of Arbitrage Payment Arbitrage - An Attack Technique and Prevention of Bitcoin OTC, https://mp.weixin.qq.com/s？biz=MzIxNTA0NDQzMA==&mid=2651798518&idx=1&sn=4e91bac98cea5bc600e8429f1af3a728, 2017.<br />
+[11] Shiliang Huang. Refusal of payment arbitrage attack -- An attack technique in OTC transactions and precautions for it, https://mp.weixin.qq.com/s?__biz=MzIxNTA0NDQzMA==&mid=2651798518&idx=1&sn=4e91bac98cea5bc600e8429f1af3a728, 2017.<br />
 [12] RSK Labs. Sidechains, Drivechains, and RSK 2-Way peg Design, https://www.rsk.co/blog/sidechains-drivechains-and-rsk-2-way-peg-design, 2017.<br />
 
 
