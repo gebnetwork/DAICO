@@ -541,7 +541,7 @@ mapping(bytes32 => Order) internal OrderList
 ### 4.1. Economic Model of GEB Token
 <p>The value storage function and the circulation function of protocol token is a pair of contradiction in the token economic model. If the design of token economic model is partial to the value storage function, due to the anticipation that the price will increase, the token holders will tend to hold but not use such tokens, which further weaken their liquidity. Such self-reinforcing positive feedback will result in high entry threshold for new users, and hinder the expanding of protocol use range. Such situation has been verified in the bitcoin system. It can be predicted that when such self-reinforcement reaches a limit, no one will use such tokens in the market, and now new users, so the whole token economic model will be close to the edge of breakdown. The token transaction is completed driven by speculation demand, and the token price may suddenly collapse at its peak point. If the design of token economic model is partial to the circulation function, the users will lose the motivation to hold tokens, but select to complete the transaction as soon as possible, especially when the predicted price increase of protocol token is lower than other tokens with value storage function. Under such circumstance, the average time when the users hold the protocol tokens depends on their predicted token price, the use value and use frequency of such token, and the transaction cost between such token and other currency. The decrease of any factor may cause that the users tend to trade, but not hold the tokens, which will further result in the falling anticipation of token price. Such reverse positive feedback will cause the collapse of protocol token price, and even the death of whole protocol ecology.</p>
 
-<p>Based on above analysis, we can draw the conclusion that only when a protocol token has both value storage function and circulation function at the same time, and their balance is maintained, the price can be stably maintained. Vitalic Buterin discussed this problem in a blog in 2017, and put forward a formula to assess the token price:</p>
+<p>Based on above analysis, we can draw the conclusion that only when a protocol token has both value storage function and circulation function at the same time, and their balance is maintained, the price can be stably maintained. Vitalik Buterin discussed this problem in a blog in 2017, and put forward a formula to assess the token price:</p>
 
 <p align="center">MC = TH</p>
 
@@ -622,7 +622,7 @@ function verifyCombinatedParams() {
 #### 4.5.2. Token Distribution Plan
 <p>The tokens for teams, consultants, crowdfunding sales, foundations, and incentive pool will be distributed by smart contracts as follows:</p>
 
-![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/token-distributed.jpg)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/token-distributed-en.jpg)
 
 - Team and Consultants: GEB tokens for the team will be frozen for 2 years through the smart contract. And the tokens for consultants will not be subject to the lock-up period and will be distributed directly to consultants of the project after the token sales are completed.
 - Crowdfunding Sales: GEB tokens distributed through crowdfunding will be divided into two parts: 1) The part that does not participate in the lock-up incentive plan will be unlocked after the crowdfunding and distributed to the participant's wallet; 2) The part that participates in the lock-up incentive plan will be locked in the smart contracts for crowdfunding, which will be unlocked and distributed to participants' wallets by stages according to established rules.
@@ -1077,7 +1077,7 @@ pubsub.emit('orderList', newOrders);
 
 - **Russia: Russia's attitude is more complex, and Russia has banned citizens from holding and trading Bitcoin, but it's very popular for Blockchain technology.**
 
-<p>In June, 2017, Russian President Vladimir Putin met the founder of the Ethereum, Vitalic Buterin.</p>
+<p>In June, 2017, Russian President Vladimir Putin met the founder of the Ethereum, Vitalik Buterin.</p>
 
 <p>In August, 2017, Russia's National Development Bank o and the Ethereum Foundation have reached strategic cooperation.</p>
 
@@ -1144,7 +1144,7 @@ pubsub.emit('orderList', newOrders);
 
 ### 7.3. SWOT Analysis
 
-![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/swot.jpg)
+![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/swot-en.jpg)
 
 <br /><br />
 ## 8. Roadmap
