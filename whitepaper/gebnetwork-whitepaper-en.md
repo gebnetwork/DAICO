@@ -5,6 +5,79 @@
 ## <h3 align="center">Abstract
 <p>This text describes a decentralized mortgage loan and OTC trade protocol based on Ethereum Blockchain, which will become the open standard and footstone of a global point-to-point mortgage loan and OTC trade network, and provide reliable interoperability for DApp established based on this protocol. All Dapps can execute mortgage loan and OTC trade by embedding a series of free and open Ethereum smart contract templates. The DApp established based on this protocol can establish its own liquidity pool, or obtain transaction orders from shared liquidity pools to make a profit by collecting service charges for matchmaking trading. A decentralized juror network shall be used for the arbitration of possible transaction disputes, and its fairness shall be ensured by token economic inventive. This protocol shall guarantee no partiality to either party of the protocol, and no charges for the protocol itself. A Decentralized Autonomous Organization (DAO) shall be responsible for the protocol upgrading as well as it safety and compatibility.</p>
 
+#### Table of contents
+- [1. Introduction of GEB Network](#1-introduction-of-geb-network)
+    - [1.1. Background Introduction](#11-background-introduction)
+    - [1.2. What’s GEB Network?](#12-whats-geb-network)
+    - [1.3. Main Characteristics of GEB Network](#13-main-characteristics-of-geb-network)
+    - [1.4. Business Mode of GEB Network](#14-business-mode-of-geb-network)
+- [2. Problems in Current Program](#2-problems-in-current-program)
+    - [2.1. Offline Transaction](#21-offline-transaction)
+    - [2.2. Centralized OTC Exchange](#22-centralized-otc-exchange)
+    - [2.3. Centralized Mortgage Loan Institutions](#23-centralized-mortgage-loan-institutions)
+    - [2.4. Advantages of GEB Protocol](#24-advantages-of-geb-protocol)
+        - [2.4.1. For Protocol Participants](#241-for-protocol-participants)
+        - [2.4.2. Competitors Comparison](#242-competitors-comparison)
+- [3. Detailed Description of GEB Protocol](#3-detailed-description-of-geb-protocol)
+    - [3.1. Protocol Procedures](#31-protocol-procedures)
+        - [3.1.1. OTC Trade Protocol](#311-otc-trade-protocol)
+        - [3.1.2. Mortgage Loan Protocol](#312-mortgage-loan-protocol)
+    - [3.2. Format of Transaction Order](#32-format-of-transaction-order)
+        - [3.2.1. OTC Transaction Order](#321-otc-transaction-order)
+        - [3.2.2. Mortgage Loan Transaction Order](#322-mortgage-loan-transaction-order)
+    - [3.3. Price, Interest Rate, Liquidation and Protection Mechanism](#33-price-interest-rate-liquidation-and-protection-mechanism)
+    - [3.4. Black Swan Event](#34-black-swan-event)
+    - [3.5. Smart Contract Technology](#35-smart-contract-technology)
+        - [3.5.1. Signature Verification](#351-signature-verification)
+        - [3.5.2. Time Locking](#352-time-locking)
+        - [3.5.3. Fill and Partially Fill in the Order](#353-fill-and-partially-fill-in-the-order)
+        - [3.5.4. Expiration Time](#354-expiration-time)
+        - [3.5.5. Cancellation of Order](#355-cancellation-of-order)
+        - [3.5.6. WETH Contract](#356-weth-contract)
+    - [3.6. Non-Ethereum Cryptocurrency Compatibility](#36-non-ethereum-cryptocurrency-compatibility)
+        - [3.6.1. 2-way Peg Technology (Current Solution)](#361-2-way-peg-technology-current-solution)
+        - [3.6.2. Lighting Atomic Swap Technology (Evolution Solution)](#362-lighting-atomic-swap-technology-evolution-solution)
+- [4. GEB Protocol Token](#4-geb-protocol-token)
+    - [4.1. Economic Model of GEB Token](#41-economic-model-of-geb-token)
+    - [4.2. Use Cases of GEB Token](#42-use-cases-of-geb-token)
+    - [4.3. Additional Issue of GEB Tokens](#43-additional-issue-of-geb-tokens)
+    - [4.4. Aragon DAO Governance](#44-aragon-dao-governance)
+    - [4.5. First Token Release](#45-first-token-release)
+        - [4.5.1. Token Release Plan - DAICO](#451-token-release-plan---daico)
+        - [4.5.2. Token Distribution Plan](#452-token-distribution-plan)
+        - [4.5.3. Withdrawals](#453-withdrawals)
+    - [4.6. GEB Investment Fund](#46-geb-investment-fund)
+- [5. GEB Protocol Ecology](#5-geb-protocol-ecology)
+    - [5.1. The overall Architecture of GEB Network](#51-the-overall-architecture-of-geb-network)
+    - [5.2. Juror Network](#52-juror-network)
+        - [5.2.1. Juror Application](#521-juror-application)
+        - [5.2.2. Arbitration](#522-arbitration)
+        - [5.2.3. Economic Incentives and Deposits](#523-economic-incentives-and-deposits)
+        - [5.2.4. Exit Mechanism](#524-exit-mechanism)
+    - [5.3. Dealer Network](#53-dealer-network)
+    - [5.4. Decentralized Authentication](#54-decentralized-authentication)
+        - [5.4.1. DID and DID Documents](#541-did-and-did-documents)
+        - [5.4.2. GEB Connect](#542-geb-connect)
+    - [5.5. Shared Liquidity Pool](#55-shared-liquidity-pool)
+        - [5.5.1. Shared Orders](#551-shared-orders)
+        - [5.5.2. Micro-services and Clusters](#552-micro-services-and-clusters)
+    - [5.6. Credible Oracle Set](#56-credible-oracle-set)
+    - [5.7. GEB Open Source Software](#57-geb-open-source-software)
+- [6. Protocol Safety Analysis](#6-protocol-safety-analysis)
+    - [6.2. Oracle Attack](#62-oracle-attack)
+    - [6.3. Man in the Middle](#63-man-in-the-middle)
+    - [6.4. Sybil or Denial of Service Attack](#64-sybil-or-denial-of-service-attack)
+    - [6.5. Penny-Spend Attack](#65-penny-spend-attack)
+    - [6.6. Confidence Attack](#66-confidence-attack)
+    - [6.7. Smart Contract Code Audit](#67-smart-contract-code-audit)
+- [7. Market Analysis](#7-market-analysis)
+    - [7.1. The Present Situation of Cryptocurrency Market](#71-the-present-situation-of-cryptocurrency-market)
+    - [7.2. The Attitudes of the Countries in the World to Blockchain](#72-the-attitudes-of-the-countries-in-the-world-to-blockchain)
+    - [7.3. SWOT Analysis](#73-swot-analysis)
+- [8. Roadmap](#8-roadmap)
+- [9. Team Introduction](#9-team-introduction)
+- [10. Advisors](#10-advisors)
+- [11. References](#11-references)
 
 ## 1. Introduction of GEB Network
 
@@ -909,7 +982,7 @@ pubsub.emit('orderList', newOrders);
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/sharded-pool.jpg)
 
-### 5.6. Credible Prophecy Set
+### 5.6. Credible Oracle Set
 <p>Because the subjectivity of smart contracts deployed on the Blockchain network is reflected in the access to data within the chain, the data outside the chain can only be passively accepted. Therefore, we need a trusted entity——prophecy machine (Oracle) to complete the input of honest data. The prophecy machine is a bridge between the Blockchain and the real world. It provides an accurate, non-tamper, stable and auditable data query interface. A general process of acquiring out-of-chain data in a Blockchain system: Intelligent contracts can obtain and input data from a data source outside the chain at a predetermined time or through an event trigger, and then the smart contract takes a preset action in accordance with the acquired data. However, the realization of the process needs to resolve two key issues: 1) Consensus; 2) Credit Receiver.</p>
 
 <p>The GEB network uses reputation system and mobile service mechanism to solve the above problems. Firstly, we select N Oracles to form a hybrid network and establish a 1: M relationship between a single Oracle and a data source in the network. Secondly, a reputation system is respectively arranged on the data source and the Oracle, and a double-layer safeguard mechanism is formed for the trust input. Finally, according to the data source and the credit accumulation of the multiple workflow of the Oracle, the mobile service is carried out so as to form forward feedback to improve the efficiency of data query and data input.</p>
@@ -964,13 +1037,13 @@ pubsub.emit('orderList', newOrders);
 
 ### 6.2. Oracle Attack
 
-### 6.3. Middleman Attack
+### 6.3. Man in the Middle
 <p>A middleman attack occurs primarily in the process of communicating between the user and the server. In the GEB network, there are shared liquidity pools of distributed cluster services and decentralized juror networks. In that cluster of shared liquidity pool, the exchange needs to communicate directly with the service node, in normal case the content is encrypted under the TLS connection, and the third party cannot decrypt even if all the data can be detected. But the third party, that is, the middleman can establish a connection with the exchange, and then the middleman establishes a connection with the service node and forwards the content between them. At this time, the middleman can decrypt and obtain the plaintext information and modify it. If the middleman intercepts a shared order issued by the exchange, forwarding it to the service node after being tampered with will cause a large number of garbage transactions to be filled in the shared liquidity pool, so that other exchanges may acquire a large number of invalid shared orders. Thus, the GEB Foundation will defend against such attacks by issuing certificates to certified cluster nodes based on their DID through DAO. In the juror network, we have adopted the content push and pull split design so that the user does not interact directly with the jury network. Instead, the content of the evidence is hashed and stored by the PageSigner or other methods, and the juror actively reviews the evidence, thus preventing the middleman attack.</p>
 
-### 6.4. Witch Attack or Denial of Service Attack
+### 6.4. Sybil or Denial of Service Attack
 <p>Disguising multiple nodes to perform a malicious activity is a Sybil attack, which causes an attacker to withstand the false data of the multi-party camouflage nodes. A denial of service attack is an attacker trying to stop the target machine from providing services. Sybil and DOS attack models can often be combined. For example, only 20 witch nodes are needed, DOS can completely attack the database of a P2P oracles to take it offline, and can also archive all traffic on the network. There exists a dependency relationship of the security between the GEB network and the Ethereum Blockchain. One of the purposes of the workload proof in the Ethereum is to make the creation of the block difficult, thereby preventing the witch attacker from malicious re-generating block chains. In the GEB protocol ecology, the jurors, traders, and the shared liquidity pool cluster nodes undergo decentralized identity authentication. There is no attacker who can broadcast multiple identity IDs to the network to act as a plurality of different nodes by only deploying one entity. In addition, the DDOS attacks on shared liquidity pools can be defended with solutions such as spider systems.</p>
 
-### 6.5. Penny-Spend attack
+### 6.5. Penny-Spend Attack
 
 ### 6.6. Confidence Attack
 <p>Confidence attack refers to the attackers’ taking advantage of typical human features such as greed, dishonesty, vanity, opportunism, desire, sympathy, gullibility, irresponsibility, despair and innocence to scam the target. However, the reflection of confidence attacks in the GEB network is mainly characterized by the fact that an attacker has acquired relevant information of the counterpart, and analyzes the data to learn about its vulnerability. Firstly, the trust cheating is obtained. (An attacker usually establishes a sample database and carries out cluster analysis in order to carry out the attack. After obtaining information, the corresponding attack means can be quickly adopted though only matching with the oracles), and the transaction between the two parties can be completed in the scene which is separated from the GEB protocol through the guidance mode. In order to protect against such attacks, we require traders to present risk warnings such as "Do not transfer transactions outside the GEB Network” on the provided transaction tools. In addition, in the case of the system itself, we have designed a decentralized identity authentication mechanism with a high degree of privacy protection. It is difficult for an attacker to obtain the target privacy data in the GEB network. At the same time, we also encourage the users to pay attention to the reasonable maintenance of the weak correlation between their own capital account addresses and the social attribute App, and to promote the self-privacy protection consciousness.</p>
@@ -1148,7 +1221,7 @@ pubsub.emit('orderList', newOrders);
 
 - CPO: Jeremy Lan
 
-<p>Mr. Jeremy Lan is the Co-founder and CTO of Harrole, a Senior Blockchain engineer. He is interested in logic and strategic research. He has rich experience in internet practice and deep technical insight and has been in charge of cloud architecture design and product development in Hiscene, a well-known artificial intelligence company. Immersed in the Blockchain field for many years, he is familiar with the Blockchain underlying technology, multi-currency wallet and exchange, as well as all kinds of safety protection. In addition, he also participated in Metaverse Blockchain development and is the Core Team member. At present, He is actively studying the problems in the project such as scalability of blockchain and the ordering scheme of DAG partial sequence network.</p>
+<p>Mr. Jeremy Lan is the Co-founder and CTO of Hardrole, a Senior Blockchain engineer. He is interested in logic and strategic research. He has rich experience in internet practice and deep technical insight and has been in charge of cloud architecture design and product development in Hiscene, a well-known artificial intelligence company. Immersed in the Blockchain field for many years, he is familiar with the Blockchain underlying technology, multi-currency wallet and exchange, as well as all kinds of safety protection. In addition, he also participated in Metaverse Blockchain development and is the Core Team member. At present, He is actively studying the problems in the project such as scalability of blockchain and the ordering scheme of DAG partial sequence network.</p>
 
 - COO: Yuanfei Zhu
 
@@ -1177,6 +1250,3 @@ pubsub.emit('orderList', newOrders);
 [10] Matus Lestan, Joe Urgo, Alexander Khoriaty. district0x Network: A cooperative of decentralized marketplaces and communities, 2017.<br />
 [11] Shiliang Huang. Refusal of payment arbitrage attack -- An attack technique in OTC transactions and precautions for it, https://mp.weixin.qq.com/s?__biz=MzIxNTA0NDQzMA==&mid=2651798518&idx=1&sn=4e91bac98cea5bc600e8429f1af3a728, 2017.<br />
 [12] RSK Labs. Sidechains, Drivechains, and RSK 2-Way peg Design, https://www.rsk.co/blog/sidechains-drivechains-and-rsk-2-way-peg-design, 2017.<br />
-
-
-
