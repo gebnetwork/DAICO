@@ -11,11 +11,11 @@ import './Vote.sol';
 contract Refund is AccessControl, DateTime {
     uint public constant decimals = 18;
     
-    uint[4] public FIRST_REFUND_VOTE_TIME = [uint(1551369600), 1567267200, 1582992000, 1598889600];
-    uint[4] public SECOND_REFUND_VOTE_TIME = [uint(1554048000), 1569859200, 1585670400, 1601481600];
+    // uint[4] public FIRST_REFUND_VOTE_TIME = [uint(1551369600), 1567267200, 1582992000, 1598889600];
+    // uint[4] public SECOND_REFUND_VOTE_TIME = [uint(1554048000), 1569859200, 1585670400, 1601481600];
     
-    // uint[4] public FIRST_REFUND_VOTE_TIME = [uint(now), 1567267200, 1582992000, 1598889600];
-    // uint[4] public SECOND_REFUND_VOTE_TIME = [uint(now), 1569859200, 1585670400, 1601481600];
+    uint[4] public FIRST_REFUND_VOTE_TIME = [uint(now), 1567267200, 1582992000, 1598889600];
+    uint[4] public SECOND_REFUND_VOTE_TIME = [uint(now), 1569859200, 1585670400, 1601481600];
     uint8 public REFUND_ROUND = 0;
     uint8 public REFUND_STAGE = 1;
     
@@ -45,13 +45,13 @@ contract Refund is AccessControl, DateTime {
     
     function refundVoteStart() public onlyOwner whenValid {
         if (REFUND_STAGE == 1) {
-            // require(now <= FIRST_REFUND_VOTE_TIME[REFUND_ROUND]);
-            // voteContract.voteStart(FIRST_REFUND_VOTE_TIME[REFUND_ROUND], FIRST_REFUND_VOTE_TIME[REFUND_ROUND] + 7 days, MIN_VALID_VOTES, SafeMath.safeDiv(token.totalSupply(), 4000));
+            require(now <= FIRST_REFUND_VOTE_TIME[REFUND_ROUND]);
+            voteContract.voteStart(FIRST_REFUND_VOTE_TIME[REFUND_ROUND], FIRST_REFUND_VOTE_TIME[REFUND_ROUND] + 7 days, MIN_VALID_VOTES, SafeMath.safeDiv(token.totalSupply(), 4000));
             voteContract.voteStart(now, now + 7 days, MIN_VALID_VOTES, SafeMath.safeDiv(token.totalSupply(), 4000));
         }
         if (REFUND_STAGE == 2) {
-            // require(firstStageStatus && now <= SECOND_REFUND_VOTE_TIME[REFUND_ROUND]);
-            // voteContract.voteStart(SECOND_REFUND_VOTE_TIME[REFUND_ROUND], SECOND_REFUND_VOTE_TIME[REFUND_ROUND] + 7 days, MIN_VALID_VOTES, SafeMath.safeDiv(token.totalSupply(), 4000));
+            require(firstStageStatus && now <= SECOND_REFUND_VOTE_TIME[REFUND_ROUND]);
+            voteContract.voteStart(SECOND_REFUND_VOTE_TIME[REFUND_ROUND], SECOND_REFUND_VOTE_TIME[REFUND_ROUND] + 7 days, MIN_VALID_VOTES, SafeMath.safeDiv(token.totalSupply(), 4000));
             voteContract.voteStart(now, now + 7 days, MIN_VALID_VOTES, SafeMath.safeDiv(token.totalSupply(), 4000));
         }
     }
@@ -98,6 +98,7 @@ contract Refund is AccessControl, DateTime {
                     REFUND_ROUND = uint8(SafeMath.safeAdd(REFUND_ROUND, 1));
                 }
                 REFUND_STAGE = 1;
+                firstStageStatus = false;
             }
             else {
                 isValid = false;
@@ -110,7 +111,7 @@ contract Refund is AccessControl, DateTime {
     }
     
     function setRefundPrice(uint _price) public onlyOwner {
-        require(_price > 0);
+        require(_price > 0 && !isValid);
         REFUND_PRICE = _price;
     }
     

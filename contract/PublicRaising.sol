@@ -45,6 +45,7 @@ contract PublicRaising is AccessControl {
     
     function () payable public whenNotPaused {
         require(inRaising && msg.sender != owner);
+        require(msg.value >= 1 ether);
         uint getTokens = SafeMath.safeMul(msg.value, price);
         require(saleTokens >= getTokens);
         saleTokens = SafeMath.safeSub(saleTokens, getTokens);
@@ -52,8 +53,8 @@ contract PublicRaising is AccessControl {
     }
     
     function finishRaise() public onlyOwner {
-        // require(!inRaising && now > endTime);
-        require(inRaising);
+        require(!inRaising && now > endTime);
+        // require(inRaising);
         if (saleTokens > leftTokensUpperLimit) {
             for (uint i = 0; i < raiseParticipants.length; i++) {
                 raiseParticipants[i].participant.transfer(raiseParticipants[i].value);

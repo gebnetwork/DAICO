@@ -9,6 +9,7 @@ contract Fund is AccessControl, DateTime {
     uint public constant decimals = 18;
     uint public constant TAP = 8 ether;
     uint public applyTap;
+    uint public appliedTap;
     uint public applyStartTime;
     
     uint public constant MIN_VALID_VOTES = 100 * 10 ** uint256(decimals);
@@ -53,7 +54,7 @@ contract Fund is AccessControl, DateTime {
     }
     
     function addTap(uint _amount) public onlyOwner { 
-        require(applyTap == 0); 
+        require(appliedTap == 0 && applyTap == 0); 
         bool timeJudge = timeValidation(applyStartTime);
         if (timeJudge) {
             applyTap = _amount;
@@ -81,17 +82,18 @@ contract Fund is AccessControl, DateTime {
     
     function finishApplyment() public onlyOwner { 
         bool applymentSuccess = voteContract.voteStop();
-        if(!applymentSuccess) {
-            applyTap = 0;
+        if(applymentSuccess) {
+            appliedTap = applyTap;
         }
+        applyTap = 0;
     }
         
     function getTap(address _to) public onlyOwner {
         require(_to != address(0) && isContinue);
         bool timeJudge = timeValidation(withdrawalTime); 
         if (timeJudge) {
-            raise.sendFund(_to, TAP + applyTap); 
-            applyTap = 0;
+            raise.sendFund(_to, TAP + appliedTap); 
+            appliedTap = 0;
         } 
     }
         

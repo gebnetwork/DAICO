@@ -14,6 +14,8 @@ contract GEBToken is AccessControl {
     mapping(address => uint256) balances;
     mapping(address => mapping (address => uint256)) allowed;
     
+    bool voteEnabled = false;
+    
     Fund public fund;
     Refund public refund;
     
@@ -42,8 +44,10 @@ contract GEBToken is AccessControl {
                 balances[msg.sender] = SafeMath.safeSub(balances[msg.sender], _value);
                 balances[_to] = SafeMath.safeAdd(balances[_to], _value);
                 emit Transfer(msg.sender, _to, _value);
-                fund.whenTokenTransfer(msg.sender, _to, _value);
-                refund.whenTokenTransfer(msg.sender, _to, _value);
+                if (voteEnabled) {
+                    fund.whenTokenTransfer(msg.sender, _to, _value);
+                    refund.whenTokenTransfer(msg.sender, _to, _value);
+                }
                 return true;
             }
         else {return false;}
@@ -57,8 +61,10 @@ contract GEBToken is AccessControl {
                 allowed[_from][msg.sender] = SafeMath.safeSub(allowed[_from][msg.sender], _value);
                 balances[_to] = SafeMath.safeAdd(balances[_to], _value);
                 emit Transfer(_from, _to, _value);
-                fund.whenTokenTransfer(_from, _to, _value);
-                refund.whenTokenTransfer(_from, _to, _value);
+                if (voteEnabled) {
+                    fund.whenTokenTransfer(_from, _to, _value);
+                    refund.whenTokenTransfer(_from, _to, _value); 
+                }
                 return true;
             }
         else {return false;}
@@ -87,5 +93,9 @@ contract GEBToken is AccessControl {
     function setRefundAddress(address _refund) public onlyOwner {
         require(_refund != address(0));
         refund = Refund(_refund);
+    }
+    
+    function setVoteStatus(bool _stat) public onlyOwner {
+        voteEnabled = _stat;
     }
 }
