@@ -479,7 +479,7 @@ mapping(bytes32 => Order) internal OrderList
 | :-------- | :-------: | :--------------------------------------- |
 | valueFill |  uint256  | Total units of token or fiat to be filled (valueFill ≤ valueA or valueB). |
 
-<p>While filling in the mortgage loan order, Taker should designate the fiat currency repayment method by designating the additional parameters such as takerrealname, paybackchannel, and paybackdetail.</p>
+<p>While filling in the mortgage loan order, Taker should designate the fiat currency repayment method by designating the additional parameters such as takerRealName, paybackChannel, and paybackDetail.</p>
 
 | Name           | Data Type | Description                              |
 | :------------- | :-------: | :--------------------------------------- |
@@ -1046,6 +1046,8 @@ pubsub.emit('orderList', newOrders);
 
 ### 6.4. Sybil or Denial of Service Attack
 <p>Disguising multiple nodes to perform a malicious activity is a Sybil attack, which causes an attacker to withstand the false data of the multi-party camouflage nodes. A denial of service attack is an attacker trying to stop the target machine from providing services. Sybil and DOS attack models can often be combined. For example, only 20 witch nodes are needed, DOS can completely attack the database of a P2P oracles to take it offline, and can also archive all traffic on the network. There exists a dependency relationship of the security between the GEB network and the Ethereum Blockchain. One of the purposes of the workload proof in the Ethereum is to make the creation of the block difficult, thereby preventing the witch attacker from malicious re-generating block chains. In the GEB protocol ecosystem, the jurors, traders, and the shared liquidity pool cluster nodes undergo decentralized identity authentication. There is no attacker who can broadcast multiple identity IDs to the network to act as a plurality of different nodes by only deploying one entity. In addition, the DDOS attacks on shared liquidity pools can be defended with solutions such as spider systems.</p>
+
+<p>It is also worth noting that in the context of mortgage loan, the role of the witch attacker may be played by the lender due to the presence and floating of mortgage loan rate. The intention of the attacker is to use a large number of fraudulent identities to initiate mortgage loan orders according to the mortgage loan rate and the analysis of market conditions. After the transaction, all of them are in default or intentionally overdue to make profits. GEB protocol at this stage, however, is designed to be secured debt, even if the attack is successful, the gains are minimal. Besides, our requirement is that all the debt/creditors require decentralized identity authentication, so do not have conditions to initiate the witch attack.</p>
 
 ### 6.5. Penny-Spend Attack
 
