@@ -35,17 +35,18 @@
         - [3.5.5. 取消订单](#355-取消订单)
         - [3.5.6. WETH合约](#356-weth合约)
     - [3.6. 非以太坊加密货币兼容](#36-非以太坊加密货币兼容)
-        - [3.6.1. 双向挂钩（2-way peg）技术（当前方案）](#361-双向挂钩2-way-peg技术当前方案)
-        - [3.6.2. 闪电原子交换（Lighting atomic swap）技术（演进方案）](#362-闪电原子交换lighting-atomic-swap技术演进方案)
+        - [3.6.1. 双向挂钩（2-way peg）技术【当前方案】](#361-双向挂钩2-way-peg技术当前方案)
+        - [3.6.2. 闪电原子交换（Lighting atomic swap）技术【演进方案】](#362-闪电原子交换lighting-atomic-swap技术演进方案)
 - [4. GEB协议代币](#4-geb协议代币)
     - [4.1. GEB代币经济模型](#41-geb代币经济模型)
     - [4.2. GEB代币用例](#42-geb代币用例)
     - [4.3. GEB代币增发](#43-geb代币增发)
     - [4.4. Aragon DAO治理](#44-aragon-dao治理)
     - [4.5. 首次代币发行](#45-首次代币发行)
-        - [4.5.1. 代币发行计划——DAICO](#451-代币发行计划daico)
-        - [4.5.2. 代币分配计划](#452-代币分配计划)
-        - [4.5.3. 资金取款](#453-资金取款)
+        - [4.5.1. 代币发行计划——IEO【备选1】](#451-代币发行计划ieo备选1)
+        - [4.5.2. 代币发行计划——DAICO【备选2】](#452-代币发行计划daico备选2)
+        - [4.5.3. 代币分配计划](#453-代币分配计划)
+        - [4.5.4. 资金取款](#454-资金取款)
     - [4.6. GEB投资基金](#46-geb投资基金)
 - [5. GEB协议生态](#5-geb协议生态)
     - [5.1. GEB Network整体架构](#51-geb-network整体架构)
@@ -487,14 +488,14 @@ mapping(bytes32 => Order) internal OrderList
 ### 3.6. 非以太坊加密货币兼容
 &emsp;&emsp;GEB协议在设计之初就考虑了对非以太坊数字货币的兼容。为了实现这一目标，我们需要依靠允许这些加密数字货币网络之间相互通信的技术和协议。我们很高兴地看到许多优秀的团队 — — 比如，Polkadot和Cosmos — — 正在着手解决这一问题。遗憾的是，这些项目现今仍处于紧张的开发阶段 — — 有的要么尚未公布具体的发布日期（例如Polkadot），要么仅仅适用于基于权益证明（PoS）机制的区块链（例如Cosmos）。因此，现有区块链间的跨链通信的实际解决方案依然有待探索。在综合比较了多种跨链技术方案以后，GEB团队选择了一条分两步实施的技术路线。<br />
 
-#### 3.6.1. 双向挂钩（2-way peg）技术（当前方案）
+#### 3.6.1. 双向挂钩（2-way peg）技术【当前方案】
 &emsp;&emsp;以下是关于双向挂钩的一般性描述：我们把以太坊上的比特币代理币称为E-BTC。当一个用户“存放”BTC时，这些BTC在比特币区块链上被锁定。这些BTC的交易证明被发送到一个以太坊合约中，该合约被称为PegContract。PegContract验证这笔交易，并发行E-BTC到用户的以太坊地址。比特币系统中的1BTC等价于以太坊系统中的1E-BTC。之后，当用户想把E-BTC换回到BTC时，只要燃烧掉E-BTC，再提供一个烧毁证明给比特币区块链。比特币区块链验证这些E-BTC已经烧毁后，解锁原始的BTC。<br />
 &emsp;&emsp;这种PegContract现在就能在以太坊上实现，并且能够无需信任地完成所有工作：它能够验证BTC已经被发送到某个地址并且锁定了；它能够发行E-BTC；它能够燃烧E-BTC并提供烧毁证明。BTC-Relay就是这样一种合约，BTC-Relay实现了比特币简化支付证明（SPV），从而能够验证一笔交易是否已经在比特币区块链上被确认（需要向Relayer支付验证手续费以激励Relayer持续向BTC-Relay合约提交比特币区块头）。因此在比特币系统中的任何交易，从支付到BTC的锁定，都可以被以太坊合约验证。同理我们可以实现用以太坊合约验证比特币现金（BCH）区块链上的交易。<br />
 &emsp;&emsp;双向挂钩存在的问题是，我们无法在比特币区块链上部署ETH-Relay或者任何锁定合约。我们可以等到RootStock发布以后，在ETH和RootStock之间建立一个双向挂钩，以实现比特币和以太坊之间的交互。另一个实际的解决方案是，将用户的BTC锁定在多重签名地址中，其中每个签名者必须在以太坊PegContract中存入ETH。当BTC被锁定时，PegContract将照常发行E-BTC。当E-BTC被发回PegContract时，它们将被烧毁并由PegContract生成证明。同时PegContract开始倒计时，为签名者提供足够的时间来验证烧毁证明并解锁BTC。如果任何签名者不签署多重签名，他存放在PegContract中的ETH会被转入用户的以太坊地址。为了使赎回过程更加顺利，签名者可以从每次存入/赎回过程中获得手续费奖励。具体原理如下图所示：<br />
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/cross-chain-vertical.jpg)
 
-#### 3.6.2. 闪电原子交换（Lighting atomic swap）技术（演进方案）
+#### 3.6.2. 闪电原子交换（Lighting atomic swap）技术【演进方案】
 &emsp;&emsp;为了确保跨链交易的安全性，双向挂钩技术的交易速度必须满足以下不等式：<br />
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7Bv%7D%5Cgeq%20%5Cfrac%7B1%7D%7Bv1%7D&plus;%5Cfrac%7B1%7D%7Bv2%7D)
@@ -578,24 +579,28 @@ function verifyCombinatedParams() {
 
 ### 4.5. 首次代币发行
 
-#### 4.5.1. 代币发行计划——DAICO
+#### 4.5.1. 代币发行计划——IEO【备选1】
+&emsp;&emsp;在结束GEB Network的私募活动之后，选择直接在首发交易所进行首次代币发行。<br />
+
+#### 4.5.2. 代币发行计划——DAICO【备选2】
 &emsp;&emsp;2018年1月，Vitalik Buterin提出了一个革命性的概念——结合ICO和DAO（分布式自治系统）的DAICO （https://ethresear.ch/t/explanation-of-daicos/465） 在DAICO中参与者可以投票赞成或者反对固定的预算增加，如果团队没有成功实施该项目，参与者可以投票退回。<br />
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/daico.jpg)
 
 &emsp;&emsp;GEB Network将使用DAICO进行资金的众筹和使用管理，将规则100%透明的嵌入在代码中，直接由参与者和智能合约控制，不再有第三方。<br />
 
-#### 4.5.2. 代币分配计划
+#### 4.5.3. 代币分配计划
 &emsp;&emsp;团队、顾问、众筹销售、基金会和激励池的代币将由智能合约分配如下：<br />
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/token-distributed.jpg)
 
 - 团队和顾问：团队部分的GEB代币将通过智能合约冻结2年。顾问的代币不受锁定期约束，在代币销售结束之后将直接分发给该项目的顾问。
-- 众筹销售：众售分配的GEB代币将分为两部分：1）未参与锁定激励计划的部分将在众筹结束后解锁并分发到参与者的钱包中; 2）参与锁定激励计划的部分将被锁定在众售智能合约中，再根据既定规则分期解锁分发至参与者钱包中。
+- 私募：私募销售的GEB代币将分为两部分：1）未参与锁定计划的部分将在私募结束后分发到参与者的钱包中; 2）参与锁定计划的部分将在私募结束后被锁定在智能合约中，再根据既定规则分期解锁分发至参与者钱包中。
+- IEO/DAICO：该部分将在ieo/daico结束后分发到参与者的钱包中。
 - 基金会：该部分的GEB代币将由智能合约冻结1年。
 - 激励池：该部分的GEB代币将由智能合约冻结4年。
 
-#### 4.5.3. 资金取款
+#### 4.5.4. 资金取款
 &emsp;&emsp;众筹销售结束之后Fund contract转为TeamWithdraw模式，允许该项目的团队定期提取筹集资金的有限数量。所筹集的资金通过Fund contract可以使用两种方式给开发团队支付：<br />
 - 有限直接支付（第一次取款）
 
@@ -608,7 +613,7 @@ function verifyCombinatedParams() {
 &emsp;&emsp;我们相信采用DAICO的资金管理方案会提供给投资者前所未有的安全，透明性和控制性的水平，帮助项目良好、健康地发展。<br />
 
 ### 4.6. GEB投资基金
-&emsp;&emsp;GEB DAICO完成后，GEB基金会将从募集到的资金和基金会中的3亿个GEB Token中各拿出30%成立GEB投资基金，专门用于投资孵化GEB协议生态内的企业和DAO。投资的方向主要包括区块链底层技术，区块链协议与应用，GEB协议扩展等。GEB投资基金由GEB DAO委员会直接管理并配置专业的投研团队和投后管理团队。基金收益的20%～50%将被用于回购市场上流通的GEB Token并销毁（视GEB Token价格决定回购规模），剩余收益将用于持续滚动投资。<br />
+&emsp;&emsp;GEB Network的募资工作完成后，GEB基金会将从募集到的资金和基金会中的3亿个GEB Token中各拿出30%成立GEB投资基金，专门用于投资孵化GEB协议生态内的企业和DAO。投资的方向主要包括区块链底层技术，区块链协议与应用，GEB协议扩展等。GEB投资基金由GEB DAO委员会直接管理并配置专业的投研团队和投后管理团队。基金收益的20%～50%将被用于回购市场上流通的GEB Token并销毁（视GEB Token价格决定回购规模），剩余收益将用于持续滚动投资。<br />
 
 <br /><br />
 ## 5. GEB协议生态

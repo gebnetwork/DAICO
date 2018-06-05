@@ -43,9 +43,10 @@
     - [4.3. Additional Issue of GEB Tokens](#43-additional-issue-of-geb-tokens)
     - [4.4. Aragon DAO Governance](#44-aragon-dao-governance)
     - [4.5. Initial Coin Offering](#45-initial-coin-offering)
-        - [4.5.1. Coin Offering Plan - DAICO](#451-coin-offering-plan---daico)
-        - [4.5.2. Token Distribution Plan](#452-token-distribution-plan)
-        - [4.5.3. Withdrawals](#453-withdrawals)
+        - [4.5.1. Coin Offering Plan - IEO (Option 1)](#451-coin-offering-plan---ieo-option-1)
+        - [4.5.2. Coin Offering Plan - DAICO (Option 2)](#452-coin-offering-plan---daico-option-2)
+        - [4.5.3. Token Distribution Plan](#453-token-distribution-plan)
+        - [4.5.4. Withdrawals](#454-withdrawals)
     - [4.6. GEB Investment Fund](#46-geb-investment-fund)
 - [5. GEB Protocol Ecology](#5-geb-protocol-ecology)
     - [5.1. The Overall Architecture of GEB Network](#51-the-overall-architecture-of-geb-network)
@@ -613,24 +614,28 @@ function verifyCombinatedParams() {
 
 ### 4.5. Initial Coin Offering
 
-#### 4.5.1. Coin Offering Plan - DAICO
+#### 4.5.1. Coin Offering Plan - DAICO (Option 1)
+<p>After private sale of GEB Token, GEB Network will make Initial-Coin-Offering in the first exchange to publicly list GEB token.</p>
+
+#### 4.5.2. Coin Offering Plan - DAICO (Option 2)
 <p>In January 2018, Vitalik Buterin proposed a revolutionary concept - DAICO (combined ICO with DAO (Distributed Autonomous Organization)) (https://ethresear.ch/t/explanation-of-daicos/465). Participants can vote for or against a fixed budget increase in DAICO. If the team did not successfully implement the project, participants can vote to cancel the project.</p>
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/daico.jpg)
 
 <p>GEB Network will use DAICO for the management of fund crowdfunding and usage, and embed the 100% transparent rules in the code, which will be directly controlled by participants and smart contracts, rather than third parties.</p>
 
-#### 4.5.2. Token Distribution Plan
+#### 4.5.3. Token Distribution Plan
 <p>The tokens for teams, consultants, crowdfunding sales, foundations, and incentive pool will be distributed by smart contracts as follows:</p>
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/token-distributed-en.jpg)
 
 - Team and Consultants: GEB Tokens for the team will be frozen for 2 years through the smart contract. And the tokens for consultants will not be subject to the lock-up period and will be distributed directly to consultants of the project after the token sales are completed.
-- Crowdfunding Sales: GEB Tokens distributed through crowdfunding will be divided into two parts: 1) The part that does not participate in the lock-up incentive plan will be unlocked after the crowdfunding and distributed to the participant's wallet; 2) The part that participates in the lock-up incentive plan will be locked in the smart contracts for crowdfunding, which will be unlocked and distributed to participants' wallets by stages according to established rules.
+- Private Sale: GEB Tokens distributed through Private sale will be divided into two parts: 1) The part that does not participate in the lock-up plan will be unlocked after the Private sale and distributed to the participant's wallet; 2) The part that participates in the lock-up plan will be locked in the smart contracts, which will be unlocked and distributed to participants' wallets by stages according to established rules.
+- IEO/DAICO: The portion of the GEB Tokens will be distributed directly to participants' wallets.
 - Foundations: The portion of the GEB Tokens will be frozen for one year by the smart contract.
-- Incentive Pool: This portion of the GEB Token will be frozen for 4 years by the smart contract.
+- Incentive Pool: This portion of the GEB Tokens will be frozen for 4 years by the smart contract.
 
-#### 4.5.3. Withdrawals
+#### 4.5.4. Withdrawals
 <p>After the end of crowdfunding sales, the Fund contract was converted to the Team Withdraw mode, which allows project team to regularly withdraw a limited amount of funds raised. Payment of funds raised through the Fund contract can be paid to the development team by the following two approaches:</p>
 
 - Limited direct payment (first withdrawal)
@@ -646,7 +651,7 @@ function verifyCombinatedParams() {
 <p>We believe that DAICO's fund management scheme will provide investors with an unprecedented safety, transparency and control to promote sound and healthy development of the project.</p>
 
 ### 4.6. GEB Investment Fund
-<p>After GEB DAICO is completed, the GEB Foundation will establish a GEB investment fund specifically for investing and incubating companies and DAOs within the GEB Ecosystem, from 30% of the funds raised and the 300 million GEB Tokens of the foundation, respectively. The direction of investment includes blockchain underlying technologies, blockchain protocols and applications, and GEB protocol extensions. The GEB investment fund is directly managed by the GEB DAO Committee, accompanied with a professional investment research team and post-investment management team. 20% to 50% of the fund income will be used to repurchase and destroy the GEB Token circulating on the market (the size of the repurchasing will be determined according to the GEB Token price), and the residual income will be used for continuous rolling investment.</p>
+<p>After GEB Network's fundraising work is completed, the GEB Foundation will establish a GEB investment fund specifically for investing and incubating companies and DAOs within the GEB Ecosystem, from 30% of the funds raised and the 300 million GEB Tokens of the foundation, respectively. The direction of investment includes blockchain underlying technologies, blockchain protocols and applications, and GEB protocol extensions. The GEB investment fund is directly managed by the GEB DAO Committee, accompanied with a professional investment research team and post-investment management team. 20% to 50% of the fund income will be used to repurchase and destroy the GEB Token circulating on the market (the size of the repurchasing will be determined according to the GEB Token price), and the residual income will be used for continuous rolling investment.</p>
 
 <br /><br />
 ## 5. GEB Protocol Ecology
