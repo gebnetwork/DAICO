@@ -614,7 +614,7 @@ function verifyCombinatedParams() {
 
 ### 4.5. Initial Coin Offering
 
-#### 4.5.1. Coin Offering Plan - DAICO (Option 1)
+#### 4.5.1. Coin Offering Plan - IEO (Option 1)
 <p>After private sale of GEB Token, GEB Network will make Initial-Coin-Offering in the first exchange to publicly list GEB token.</p>
 
 #### 4.5.2. Coin Offering Plan - DAICO (Option 2)
