@@ -1223,7 +1223,7 @@ pubsub.emit('orderList', newOrders);
 <br /><br />
 ## 9. Team Introduction
 
-- Foundation Chairman & CSO: Wei Zhu
+- Founder & Foundation Chairman: Wei Zhu
 
 <p>Wei Zhu, bachelor of science in microelectronics of Fudan University and a practitioner with 10-odd-year experience in R&D and management in the Internet technology industry, preacher of Blockchain and artificial intelligence well as a growth hacker and lifelong learner. Zhu has founded Xinpu IT Consulting Firm, which is one of the earliest enterprises providing blockchain technology consulting services. He has successively held the posts of chief architect at Qihoo 360 in charging of WiFi business and technical director of DeNA China in charging of R&D management of 100 million level user products. Zhu is the pioneer of technological innovation advocating the restructuring of the Internet infrastructure from the protocol layer. He is lucubrating and sharply observing into the theory of Blockchain, distributed computing, event tracing, Turing calculation, deep learner and so on.</p>
 
