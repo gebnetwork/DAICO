@@ -590,7 +590,7 @@ function verifyCombinatedParams() {
 &emsp;&emsp;GEB Network将使用DAICO进行资金的众筹和使用管理，将规则100%透明的嵌入在代码中，直接由参与者和智能合约控制，不再有第三方。<br />
 
 #### 4.5.3. 代币分配计划
-&emsp;&emsp;团队、顾问、众筹销售、基金会和激励池的代币将由智能合约分配如下：<br />
+&emsp;&emsp;GEB Token发行总量为10亿，团队、顾问、私募、众筹销售、基金会和激励池等各部分的代币将由智能合约分配如下：<br />
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/token-distributed.jpg)
 

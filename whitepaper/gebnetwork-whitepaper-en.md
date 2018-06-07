@@ -625,15 +625,15 @@ function verifyCombinatedParams() {
 <p>GEB Network will use DAICO for the management of fund crowdfunding and usage, and embed the 100% transparent rules in the code, which will be directly controlled by participants and smart contracts, rather than third parties.</p>
 
 #### 4.5.3. Token Distribution Plan
-<p>The tokens for teams, consultants, crowdfunding sales, foundations, and incentive pool will be distributed by smart contracts as follows:</p>
+<p>The total amount of GEB Token issuance is 1 billion. And the tokens for teams, advisors, private sale, crowdfunding sale, foundation, and incentive pool will be distributed by smart contracts as follows:</p>
 
 ![img](https://github.com/gebnetwork/DAICO/blob/master/whitepaper/images/token-distributed-en.jpg)
 
-- Team and Consultants: GEB Tokens for the team will be frozen for 2 years through the smart contract. And the tokens for consultants will not be subject to the lock-up period and will be distributed directly to consultants of the project after the token sales are completed.
-- Private Sale: GEB Tokens distributed through Private sale will be divided into two parts: 1) The part that does not participate in the lock-up plan will be unlocked after the Private sale and distributed to the participant's wallet; 2) The part that participates in the lock-up plan will be locked in the smart contracts, which will be unlocked and distributed to participants' wallets by stages according to established rules.
+- Team and Advisors: 3% will be distributed immediately; the remaining 12% will be locked up by smart contract for one year, after the one-year lock-up period, 1) GEB Tokens of advisors will be distributed immediately; 2) GEB Tokens of the team will be distributed in stages over a period of 18 months.
+- Private Sale: GEB Tokens via private sale will be distributed in two methods: 1) The part that does not participate in the lock-up plan will be unlocked after the private sale and distributed to the participant's wallet; 2) The part that participates in the lock-up plan will be locked in the smart contracts, which will be unlocked and distributed to participants' wallets by stages according to established rules.
 - IEO/DAICO: The portion of the GEB Tokens will be distributed directly to participants' wallets.
-- Foundations: The portion of the GEB Tokens will be frozen for one year by the smart contract.
-- Incentive Pool: This portion of the GEB Tokens will be frozen for 4 years by the smart contract.
+- Foundations: The GEB Tokens of foundation will be escrowed by smart contract and will be unlocked and distributed monthly over a period of 2 years. The use of unlocked GEB Tokens requires approval of GEB DAO and disclosure of details during use.
+- Incentive Pool: Each year the team and community developers will be given a fixed share of 1% from the incentive pool for 10 consecutive years; the remaining 5% of GEB Tokens will be used for introduction of important resources, including but not limited to talents, strategic partners, etc.
 
 #### 4.5.4. Withdrawals
 <p>After the end of crowdfunding sales, the Fund contract was converted to the Team Withdraw mode, which allows project team to regularly withdraw a limited amount of funds raised. Payment of funds raised through the Fund contract can be paid to the development team by the following two approaches:</p>
