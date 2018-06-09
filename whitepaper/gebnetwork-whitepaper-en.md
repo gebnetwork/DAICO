@@ -1223,13 +1223,9 @@ pubsub.emit('orderList', newOrders);
 <br /><br />
 ## 9. Team Introduction
 
-- Founder & Foundation Chairman: Wei Zhu
+- CEO & Foundation Chairman: Wei Zhu
 
 <p>Wei Zhu, bachelor of science in microelectronics of Fudan University and a practitioner with 10-odd-year experience in R&D and management in the Internet technology industry, preacher of Blockchain and artificial intelligence well as a growth hacker and lifelong learner. Zhu has founded Xinpu IT Consulting Firm, which is one of the earliest enterprises providing blockchain technology consulting services. He has successively held the posts of chief architect at Qihoo 360 in charging of WiFi business and technical director of DeNA China in charging of R&D management of 100 million level user products. Zhu is the pioneer of technological innovation advocating the restructuring of the Internet infrastructure from the protocol layer. He is lucubrating and sharply observing into the theory of Blockchain, distributed computing, event tracing, Turing calculation, deep learner and so on.</p>
-
-- CEO: Ching Zhu
-
-<p>Ching Zhu, a gainer of the Honors Outstanding Students from UESTC, is the founder of the ChainBoard Technology. Ching held the post of technical director of a famous fintech company ICE KREDIT in charging of designing and leading the R&D for integrated platform of risk management and big data-based credit platform. She has accumulated rich experience in the design of credit investigation and financial risk management on internet and the R&D for architecture design of microservice system. In 2016, Ching began to lead the team to master and successfully developed the blockchain-based industry application, and participate in the operation of the Blockchain project in a listed company. She has served as a special technical consultant to provide consultation service on architecture and design to a number of listed companies and has served as a lecturer to share keynote speeches at several well-known technical forums.</p>
 
 - CTO: Jeremy Lan
 
