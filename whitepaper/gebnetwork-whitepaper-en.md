@@ -1227,15 +1227,6 @@ pubsub.emit('orderList', newOrders);
 
 <p>Wei Zhu, bachelor of science in microelectronics of Fudan University and a practitioner with 10-odd-year experience in R&D and management in the Internet technology industry, preacher of Blockchain and artificial intelligence well as a growth hacker and lifelong learner. Zhu has founded Xinpu IT Consulting Firm, which is one of the earliest enterprises providing blockchain technology consulting services. He has successively held the posts of chief architect at Qihoo 360 in charging of WiFi business and technical director of DeNA China in charging of R&D management of 100 million level user products. Zhu is the pioneer of technological innovation advocating the restructuring of the Internet infrastructure from the protocol layer. He is lucubrating and sharply observing into the theory of Blockchain, distributed computing, event tracing, Turing calculation, deep learner and so on.</p>
 
-- CTO: Jeremy Lan
-
-<p>Jeremy Lan, a senior Blockchain engineer, is the co-founder and CTO of Hardrole. He is interested in logic and strategic research and is abundant with experience in internet practice and deep technical insight. Jeremy has held the post of principal of a well-known artificial intelligence company Hiscene in charging of cloud architecture design and product development. With years of striving in the blockchain field, Jeremy is familiar with the underlying technology of Blockchain, multi-currency digital wallet and exchange, as well as all kinds of safety protection. In addition, Jeremy is also a member of Core Team participating in Metaverse Blockchain. Currently, he commit himself to actively explore and solve problems in projects, such as scalability of Blockchain and the ordering scheme of DAG partial sequence network.</p>
-
-
-- COO: Yuanfei Zhu
-
-<p>Yuanfei Zhu, recommend him for admission to Shanghai Jiao Tong University as one of top students majoring in computer science and technology with excellent performance in the computer/physics competition during his senior high school. He has founded Moregg during his suspension of schooling, and thus gained a lot of achievements from nothing to something while achieving outstanding result. After his graduation, he mainly engaged in the work of algorithm for big data in situations of online advertising, marketing and security and for machine learning in Silicon Valley, and and is abundant with rich experience in  data analysis and operation experience at Yahoo. Since participating in Blockchain project development in 2016 as an early developer of Ethereum, he has pursued the bottom technology of the Blockchain and has participated in the high-performance exchange architecture design, operated the ico delegated investment platform Beico, and successfully completed a series of smart contracts-based projects such as ENS. In 2017, he established Satori in Singapore and managing a professional team providing world-class services such as overseas compliance for funds and foundations. The partners have served and estanlished cooperative relationship with IOST, ZJL, TNC, etc.</p>
-
 - CFO: Chun Jiang
 
 <p>Chun Jiang, bachelor of Fudan University and master in International Trade and Economics from Duke University. Jiang once held the post of a financial analyst of Morgan Stanley in London, and served in the World Bank engaging in global value chain research for analyzing the impact of China's economic and financial policies on industrial chain upgrading and globalization.</p>
@@ -1247,14 +1238,6 @@ pubsub.emit('orderList', newOrders);
 
 <br /><br />
 ## 10. Advisors
-
-- Benjamin Gu
-
-<p>Benjamin Gu, mmaster on business administration from University of Texas, master from University of Notre Dame, master of China University of Science and Technology, and bachelor of Shandong University. Benjamin is currently holding the posts of chief strategy officer and Chairman of the foundation of DAEX. He has held the post of Deputy Chief Information Technology Officer of Huatai United Securities and Chief Operating Officer of several financial services companies. He has accumulated rich working experience in senior management and R&D in the well-known Internet finance companies in both China and the United States. Also, Benjamin previously held a post of principal in charging of the development and operation of ENCORE, sole clearing system for the US options trading market in the U.S. Options Clearing Company.</p>
-
-- Yang Zhao
-
-<p>Yang Zhao, ex-president of E Surfing Credit Investigation of China Telecom, is currently holding the post of Chief Operating Officer of Shanghai Xinyan Credit Investigation Service Co., Ltd. Zhao has accumulated years’ experience in applying data from telecom operators to credit investigation and risk management. Now, he is leading a professional team to co-establish Xinyan concentrating on big data-based credit investigation. With their professional products and high quality services, Xinyan has thrived in the market.</p>
 
 - Yanpeng Lv
 
